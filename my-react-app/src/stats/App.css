@@ -1,0 +1,156 @@
+/* PoE-inspired palette. Scoped to the statistics page. */
+:root:has(.my-div) {
+  color-scheme: dark;
+  --text: #c4bcac;
+  --text-h: #ede3ce;
+  --bg: #101211;
+  --border: #39372e;
+  --accent: #c6a66a;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body:has(.my-div) {
+  background:
+    radial-gradient(ellipse at 50% 0%, #34302355, transparent 60%),
+    linear-gradient(135deg, #111613, #101110 65%, #171411);
+  color: #c4bcac;
+  min-width: 320px;
+}
+
+#root:has(.my-div) {
+  width: 1120px;
+  min-height: 100svh;
+  padding: 48px 40px;
+  margin: 0 auto;
+  border: 0;
+  text-align: left;
+  gap: 32px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#root:has(.my-div) *,
+#root:has(.my-div) *::before,
+#root:has(.my-div) *::after {
+  box-sizing: border-box;
+}
+
+.my-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid #665435;
+}
+
+#root:has(.my-div) button {
+  min-height: 44px;
+  padding: 11px 22px;
+  border: 1px solid #534936;
+  border-radius: 4px;
+  background: linear-gradient(#29291f, #20231d);
+  color: #ded2b7;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 1px #ffffff08, 0 2px 6px #00000025;
+  transition: background 160ms, border-color 160ms, color 160ms;
+}
+
+#root:has(.my-div) button:hover {
+  background: #343429;
+  border-color: #b59862;
+  color: #fff0d0;
+}
+
+#root:has(.my-div) button:active {
+  background: #1c201b;
+}
+
+#root:has(.my-div) button:focus-visible,
+#root:has(.my-div) input:focus-visible {
+  outline: 2px solid #d2b378;
+  outline-offset: 4px;
+}
+
+#root:has(.my-div) .my-div button {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+
+/* This page currently displays statistics. */
+#root:has(.my-div) .my-div button:first-child {
+  color: #eed6a5;
+  background: #b6995f12;
+  border-color: #75603c;
+  box-shadow: inset 0 -2px #bb995d;
+}
+
+#root:has(.my-div) .my-div button:hover {
+  color: #fff0d0;
+  background: #b6995f18;
+}
+
+#root:has(.my-div) > section + section {
+  padding: 28px;
+  border: 1px solid #3e3d31;
+  border-top-color: #75603c;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #1e231ee8, #171b18f5);
+  box-shadow: 0 16px 48px #00000030, inset 0 1px #ffffff04;
+}
+
+#root:has(.my-div) > section + section > div:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+#root:has(.my-div) > section + section > div:first-child > button:first-child {
+  background: linear-gradient(#b99a60, #927442);
+  border-color: #c2a46d;
+  color: #171810;
+}
+
+#root:has(.my-div) > section + section > div:first-child > button:first-child:hover {
+  background: #cfb17a;
+}
+
+/* Empty statistics container stays compact until data is added. */
+#root:has(.my-div) > section + section > div:empty {
+  display: none;
+}
+
+#root:has(.my-div) input {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  min-height: 46px;
+  padding: 11px 14px;
+  border: 1px solid #575442;
+  border-radius: 4px;
+  background: #101511;
+  color: #eee4cf;
+  caret-color: #d2b378;
+  font: inherit;
+  box-shadow: inset 0 2px 5px #00000025;
+}
+
+#root:has(.my-div) input:hover { border-color: #8b7955; }
+#root:has(.my-div) input::placeholder { color: #999482; }
+
+@media (max-width: 600px) {
+  #root:has(.my-div) { padding: 24px 16px; gap: 24px; }
+  #root:has(.my-div) > section + section { padding: 20px; }
+  #root:has(.my-div) .my-div button { flex: 1; padding: 10px 12px; font-size: 16px; }
+  #root:has(.my-div) > section + section > div:first-child > button { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root:has(.my-div) button { transition: none; }
+}
