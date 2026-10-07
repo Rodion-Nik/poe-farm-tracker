@@ -1,7 +1,6 @@
 import currency from "../ApiDataBase/currency.json"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-console.log(currency)
 
 function NewFarm({
     nameHolderArr,
@@ -52,10 +51,7 @@ function NewFarm({
         <button
           className={selector === farm.id ? "farm-tab is-selected" : "farm-tab"}
           key={farm.id}
-          onClick={() =>
-            {console.log(farm);
-            setSelector(farm.id);
-          }}
+          onClick={() => setSelector(farm.id)}
         >
           {farm.name}
         </button>
@@ -63,68 +59,108 @@ function NewFarm({
       ))}
 
       {nameHolderArr.length > 0 && !add && (
-        <>
         <button className="button farm-add" onClick={() => setAdd(true)}>
           +
         </button>
-        <button className="button button-debug" onClick={() => console.log(nameHolderArr,selector)}>
-        123
-        </button>
-        </>
       )}
     </div>
   );
 }
 
-function SidePanelWithInfo() {
+function SidePanelWithInfo({ onOpenExpenses, onOpenDrop }) {
   return(
-    <aside className="side-panel"></aside>
+    <aside className="side-panel">
+      <button className="button side-panel-button" onClick={onOpenExpenses}>расходы</button>
+      <button className="button side-panel-button" onClick={onOpenDrop}>дроп</button>
+    </aside>
   )
 }
 
-function ItemSelectorPanel({nameHolderArr,setNameHolderArr,selector,setSelectedItems,selectedItems,currentDrop,setCurrentDrop}) {
-
-
-
-
-
-  return(
-  <section className="item-selector">
-    <h3 className="item-section-title">Валюта</h3>
-    <div className="item-grid">
-    {currency.items.map((cur)=> (
-
-      <button
-      key={cur.id}
-      className={selectedItems.includes(cur.id) ? "item-card is-selected" : "item-card"}
-      onClick={() => {setSelectedItems(prev => prev.includes(cur.id) ? prev.filter(id => id !== cur.id) : [...prev, cur.id])}}>
-        <h6 className="item-name">{cur.name}</h6>
-        <img className="item-icon" src={`https://web.poecdn.com${cur.image}`} alt={cur.name} loading="lazy"/>
-      </button>
-    )
-    )}
+function Modal({ title, onClose, wide, children }) {
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className={wide ? "modal-window modal-window--wide" : "modal-window"} onClick={(event) => event.stopPropagation()}>
+        <div className="modal-header">
+          <h3 className="modal-title">{title}</h3>
+          <button className="button modal-close" onClick={onClose}>×</button>
+        </div>
+        <div className="modal-body">
+          {children}
+        </div>
+      </div>
     </div>
-    <div className="item-selector-actions">
-    <button className="button button-primary" onClick={() => {setCurrentDrop(selectedItems.map(id => ({
-    item: id,
-    count: currentDrop.find(d => d.item === id)?.count ?? 0
-    })))}}>сохранить</button>
-    <button className="button button-debug" onClick={() => console.log(currentDrop)}>qwe</button>
-    </div>
-  </section>
+  )
+}
+
+const ITEM_CATEGORIES = [
+  "Все", "Валюта", "Сущности", "Делириум", "Разлом",
+  "Бездна", "Храм Атзири", "Фрагменты", "Руны", "Ритуал", "Ядра душ",
+  "Идолы", "Неогранённые камни", "Экспедиция", "Камни"
+];
+
+function ItemSelectorPanel({setSelectedItems,selectedItems,currentDrop,setCurrentDrop,onClose}) {
+  return (
+    <section className="item-selector" aria-label="Выбор предметов">
+      <aside className="item-selector-sidebar">
+        <div className="item-category-list" aria-label="Категории предметов">
+          {ITEM_CATEGORIES.map(category => (
+            <button
+              type="button"
+              key={category}
+              className={category === "Все" ? "item-category is-active" : "item-category"}
+              aria-disabled="true"
+              title="Категория пока недоступна"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <div className="item-selector-actions">
+          <button
+            type="button"
+            className="button item-selector-save"
+            onClick={() => {setCurrentDrop(selectedItems.map(id => ({
+              item: id,
+              count: currentDrop.find(d => d.item === id)?.count ?? 0
+            }))), selectedItems.length === 0 ? "" : onClose()}}
+          >
+            Сохранить
+          </button>
+        </div>
+      </aside>
+
+      <div className="item-selector-content">
+        <h3 className="item-section-title" id="item-currency-title">Валюта</h3>
+        <div className="item-scroll" role="region" aria-labelledby="item-currency-title" tabIndex={0}>
+          <div className="item-grid">
+            {currency.items.map(cur => (
+              <button
+                type="button"
+                key={cur.id}
+                className={selectedItems.includes(cur.id) ? "item-card is-selected" : "item-card"}
+                aria-pressed={selectedItems.includes(cur.id)}
+                onClick={() => {setSelectedItems(prev => prev.includes(cur.id) ? prev.filter(id => id !== cur.id) : [...prev, cur.id])}}
+              >
+                <img className="item-icon" src={`https://web.poecdn.com${cur.image}`} alt="" loading="lazy"/>
+                <span className="item-name">{cur.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
 
 function Main({
-  nameHolderArr,
   selectedFarm
 }) {
 
 
   return (
     <div className="farm-summary">
-      <h4 className="summary-card">количетсво ранов {selectedFarm?.runs?.length ?? 2}</h4>
+      <h4 className="summary-card">количетсво ранов {selectedFarm?.runs?.length ?? 0}</h4>
       <h4 className="summary-card">профит </h4>
       <h4 className="summary-card">профит в час</h4>
       <h4 className="summary-card">общ затраты</h4>
@@ -135,11 +171,9 @@ function Main({
 
 
 function RunCollector ({
-  nameHolderArr,
   selectedFarm,
   setNameHolderArr,
   selector,
-  selectedItems,
   currentDrop,
   setCurrentDrop
 }){
@@ -202,7 +236,10 @@ let idForDell = null
         </div>)
   } )}
       </div>
-      <button className="button button-primary" onClick={arrayChange}>
+      {currentDrop.length === 0 && (
+        <p className="run-hint">сначала выберите дроп</p>
+      )}
+      <button className="button button-primary" onClick={arrayChange} disabled={currentDrop.length === 0}>
       сохранить</button>
     </div>}
 
@@ -219,11 +256,7 @@ let idForDell = null
         </div>)})}
         </div>
 
-        {!runs.saved &&
-        <button className="button button-primary" onClick={arrayChange}>
-        сохранить</button>}
-        {runs.saved &&
-        <button className="button button-danger" onClick={() => {idForDell = runs.id, deleteRun()}}>удалить ран</button>}
+        <button className="button button-danger" onClick={() => {idForDell = runs.id, deleteRun()}}>удалить ран</button>
 
       </div>))}
     </div>
@@ -234,11 +267,28 @@ let idForDell = null
 
 
 
+const FARMS_STORAGE_KEY = "farms";
+
+function getInitialFarms() {
+  try {
+    const saved = localStorage.getItem(FARMS_STORAGE_KEY);
+    return saved ? JSON.parse(saved) : [];
+  } catch {
+    return [];
+  }
+}
+
 function App({}) {
-  const [nameHolderArr, setNameHolderArr] = useState([]);
+  const [nameHolderArr, setNameHolderArr] = useState(getInitialFarms);
+
+  useEffect(() => {
+    localStorage.setItem(FARMS_STORAGE_KEY, JSON.stringify(nameHolderArr));
+  }, [nameHolderArr]);
+
   const [selector, setSelector] = useState(null)
   const [selectedItems, setSelectedItems] = useState([])
   const [currentDrop, setCurrentDrop] = useState([])
+  const [activeModal, setActiveModal] = useState(null) // null | "expenses" | "drop"
 
   const selectedFarm = nameHolderArr.find(e => e.id === selector)
   return (
@@ -251,44 +301,44 @@ function App({}) {
     selector={selector}
     setSelector={setSelector}
   />
+  {selector !== null && (
   <Main
-  nameHolderArr={nameHolderArr}
   selectedFarm={selectedFarm}
   />
+  )}
   <RunCollector
-    nameHolderArr={nameHolderArr}
     setNameHolderArr={setNameHolderArr}
     selector={selector}
-    setSelector={setSelector}
     selectedFarm={selectedFarm}
-    selectedItems={selectedItems}
     currentDrop={currentDrop}
     setCurrentDrop={setCurrentDrop}
   />
-  <ItemSelectorPanel
-  selectedItems={selectedItems}
-  setSelectedItems={setSelectedItems}
-  nameHolderArr={nameHolderArr}
-  setNameHolderArr={setNameHolderArr}
-  selector={selector}
-  currentDrop={currentDrop}
-  setCurrentDrop={setCurrentDrop}
-
+  </div>
+  {selector !== null && (
+  <SidePanelWithInfo
+    onOpenExpenses={() => setActiveModal("expenses")}
+    onOpenDrop={() => setActiveModal("drop")}
   />
+  )}
+  </div>
 
-<button className="button button-debug" onClick={() => {
-  console.log("=== DEBUG ===");
-  console.log("nameHolderArr:", nameHolderArr);
-  console.log("selector:", selector);
-  console.log("selectedFarm:", selectedFarm);
-  console.log("selectedItems:", selectedItems);
-  console.log("currentDrop:", currentDrop);
-}}>
-  DEBUG
-</button>
-  </div>
-  <SidePanelWithInfo />
-  </div>
+  {activeModal === "expenses" && (
+    <Modal title="Расходы" onClose={() => setActiveModal(null)}>
+    </Modal>
+  )}
+
+  {activeModal === "drop" && (
+    <Modal title="Дроп" wide onClose={() => setActiveModal(null)}>
+      <ItemSelectorPanel
+        onClose={() => setActiveModal(null)}
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
+        selector={selector}
+        currentDrop={currentDrop}
+        setCurrentDrop={setCurrentDrop}
+      />
+    </Modal>
+  )}
   </div>)
 }
 
