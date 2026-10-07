@@ -6,7 +6,8 @@ function NewFarm({
     nameHolderArr,
     setNameHolderArr,
     selector,
-    setSelector
+    setSelector,
+    createDemoFarm
 }) {
 
   const [name, setName] = useState("");
@@ -27,35 +28,49 @@ function NewFarm({
     setAdd(false);
   }
 
+  function deleteFarm(farmId) {
+    setNameHolderArr(prev => prev.filter(farm => farm.id !== farmId));
+    if (selector === farmId) {
+      setSelector(null);
+    }
+  }
+
   return (
     <div className="farm-selector">
       {nameHolderArr.length === 0 && (
-        <h1 className="farm-empty-title">Тут пусто, но это не мешает вам создать новый</h1>
+        <h1 className="farm-empty-title">It's empty here, but nothing stops you from creating a new one</h1>
       )}
 
       {(nameHolderArr.length === 0 || add) && (
         <div className="farm-create">
-          Введите название{" "}
+          Enter a name{" "}
           <input className="farm-name-input"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
 
           <button className="button button-primary" onClick={addFarm}>
-            Создать
+            Create
           </button>
         </div>
       )}
 
       {nameHolderArr.map((farm) => (
-        <button
-          className={selector === farm.id ? "farm-tab is-selected" : "farm-tab"}
-          key={farm.id}
-          onClick={() => setSelector(farm.id)}
-        >
-          {farm.name}
-        </button>
-
+        <div className="farm-tab-wrap" key={farm.id}>
+          <button
+            className={selector === farm.id ? "farm-tab is-selected" : "farm-tab"}
+            onClick={() => setSelector(farm.id)}
+          >
+            {farm.name}
+          </button>
+          <button
+            type="button"
+            className="button button-danger farm-tab-delete"
+            onClick={() => deleteFarm(farm.id)}
+          >
+            ×
+          </button>
+        </div>
       ))}
 
       {nameHolderArr.length > 0 && !add && (
@@ -63,6 +78,10 @@ function NewFarm({
           +
         </button>
       )}
+
+      <button className="button" onClick={createDemoFarm}>
+        Demo data
+      </button>
     </div>
   );
 }
@@ -70,8 +89,8 @@ function NewFarm({
 function SidePanelWithInfo({ onOpenExpenses, onOpenDrop }) {
   return(
     <aside className="side-panel">
-      <button className="button side-panel-button" onClick={onOpenExpenses}>расходы</button>
-      <button className="button side-panel-button" onClick={onOpenDrop}>дроп</button>
+      <button className="button side-panel-button" onClick={onOpenExpenses}>expenses</button>
+      <button className="button side-panel-button" onClick={onOpenDrop}>drop</button>
     </aside>
   )
 }
@@ -93,18 +112,18 @@ function Modal({ title, onClose, wide, children }) {
 }
 
 const ITEM_CATEGORIES = [
-  "Все", "Валюта", "Сущности", "Делириум", "Разлом",
-  "Бездна", "Храм Атзири", "Фрагменты", "Руны", "Ритуал", "Ядра душ",
-  "Идолы", "Неогранённые камни", "Экспедиция", "Камни"
+  "All", "Currency", "Essences", "Delirium", "Breach",
+  "Abyss", "Temple of Atzoatl", "Fragments", "Runes", "Ritual", "Soul Cores",
+  "Idols", "Uncut Gems", "Expedition", "Gems"
 ];
 
 function ItemSelectorPanel({setSelectedItems,selectedItems,currentDrop,setCurrentDrop,onClose}) {
-  const [activeCategory, setActiveCategory] = useState("Все");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   return (
-    <section className="item-selector" aria-label="Выбор предметов">
+    <section className="item-selector" aria-label="Item selector">
       <aside className="item-selector-sidebar">
-        <div className="item-category-list" aria-label="Категории предметов">
+        <div className="item-category-list" aria-label="Item categories">
           {ITEM_CATEGORIES.map(category => (
             <button
               type="button"
@@ -125,13 +144,13 @@ function ItemSelectorPanel({setSelectedItems,selectedItems,currentDrop,setCurren
               count: currentDrop.find(d => d.item === id)?.count ?? 0
             }))), selectedItems.length === 0 ? "" : onClose()}}
           >
-            Сохранить
+            Save
           </button>
         </div>
       </aside>
 
       <div className="item-selector-content">
-        <h3 className="item-section-title" id="item-currency-title">Валюта</h3>
+        <h3 className="item-section-title" id="item-currency-title">Currency</h3>
         <div className="item-scroll" role="region" aria-labelledby="item-currency-title" tabIndex={0}>
           <div className="item-grid">
             {allItems.map(cur => (
@@ -163,10 +182,10 @@ function Main({
 
   return (
     <div className="farm-summary">
-      <h4 className="summary-card">количетсво ранов {selectedFarm?.runs?.length ?? 0}</h4>
-      <h4 className="summary-card">профит {profit.toFixed(2)} div</h4>
-      <h4 className="summary-card">профит в час</h4>
-      <h4 className="summary-card">общ затраты</h4>
+      <h4 className="summary-card">runs count {selectedFarm?.runs?.length ?? 0}</h4>
+      <h4 className="summary-card">profit {profit.toFixed(2)} div</h4>
+      <h4 className="summary-card">profit per hour</h4>
+      <h4 className="summary-card">total costs</h4>
     </div>
   )
 }
@@ -225,10 +244,10 @@ let idForDell = null
     <>
     {selector !== null &&
     <div className="run-editor">
-      <h4 className="run-title">инфо о вашем забеге</h4>
-      <h4 className="run-number">номер забега: {(selectedFarm?.runs?.length ?? 0) + 1}</h4>
+      <h4 className="run-title">current run info</h4>
+      <h4 className="run-number">run number: {(selectedFarm?.runs?.length ?? 0) + 1}</h4>
       <div className="run-drops">
-      <span className="run-label">дроп:</span> {currentDrop.map((drop,index) =>{
+      <span className="run-label">drop:</span> {currentDrop.map((drop,index) =>{
         const itemInfo = allItems.find(cur=> cur.id === drop.item);
         return(
         <div className="drop-row" key={drop.item}>
@@ -240,18 +259,18 @@ let idForDell = null
   } )}
       </div>
       {currentDrop.length === 0 && (
-        <p className="run-hint">сначала выберите дроп</p>
+        <p className="run-hint">select drop first</p>
       )}
       <button className="button button-primary" onClick={arrayChange} disabled={currentDrop.length === 0}>
-      сохранить</button>
+      save</button>
     </div>}
 
     <div className="run-history">
     {selectedFarm?.runs?.map((runs,index) =>(
       <div className="run-card" key={runs.id}>
-        <h4 className="run-title">забег: {index + 1} </h4>
+        <h4 className="run-title">run: {index + 1} </h4>
         <div className="run-drops">
-        <span className="run-label">дроп:</span> {runs.drop.map((drop,index) =>{
+        <span className="run-label">drop:</span> {runs.drop.map((drop,index) =>{
         const itemInfo = allItems.find(cur=> cur.id === drop.item);
         return(
         <div className="drop-row" key={index}>
@@ -259,7 +278,7 @@ let idForDell = null
         </div>)})}
         </div>
 
-        <button className="button button-danger" onClick={() => {idForDell = runs.id, deleteRun()}}>удалить ран</button>
+        <button className="button button-danger" onClick={() => {idForDell = runs.id, deleteRun()}}>delete run</button>
 
       </div>))}
     </div>
@@ -294,6 +313,45 @@ function App({}) {
   const [activeModal, setActiveModal] = useState(null) // null | "expenses" | "drop"
 
   const selectedFarm = nameHolderArr.find(e => e.id === selector)
+
+  function createDemoFarm() {
+    const now = Date.now();
+    const demoFarm = {
+      id: now,
+      name: "Demo farm",
+      runs: [
+        { id: now + 1, saved: true, drop: [
+          { item: "alch", count: 48 },
+          { item: "chaos", count: 15 },
+          { item: "exalted", count: 4 },
+          { item: "aug", count: 60 },
+          { item: "chance", count: 9 },
+        ]},
+        { id: now + 2, saved: true, drop: [
+          { item: "divine", count: 2 },
+          { item: "regal", count: 10 },
+          { item: "adept-rune", count: 3 },
+          { item: "annul", count: 5 },
+          { item: "bauble", count: 18 },
+        ]},
+        { id: now + 3, saved: true, drop: [
+          { item: "chaos", count: 22 },
+          { item: "vaal", count: 7 },
+          { item: "mirror", count: 1 },
+          { item: "gcp", count: 3 },
+        ]},
+      ],
+    };
+    setNameHolderArr(prev => [...prev, demoFarm]);
+    setSelector(now);
+    setSelectedItems(["alch", "regal", "chance"]);
+    setCurrentDrop([
+      { item: "alch", count: 7 },
+      { item: "regal", count: 1 },
+      { item: "chance", count: 4 },
+    ]);
+  }
+
   return (
   <div className="farm-page">
   <div className="farm-row">
@@ -303,6 +361,7 @@ function App({}) {
     setNameHolderArr={setNameHolderArr}
     selector={selector}
     setSelector={setSelector}
+    createDemoFarm={createDemoFarm}
   />
   {selector !== null && (
   <Main
@@ -326,12 +385,12 @@ function App({}) {
   </div>
 
   {activeModal === "expenses" && (
-    <Modal title="Расходы" onClose={() => setActiveModal(null)}>
+    <Modal title="Expenses" onClose={() => setActiveModal(null)}>
     </Modal>
   )}
 
   {activeModal === "drop" && (
-    <Modal title="Дроп" wide onClose={() => setActiveModal(null)}>
+    <Modal title="Drop" wide onClose={() => setActiveModal(null)}>
       <ItemSelectorPanel
         onClose={() => setActiveModal(null)}
         selectedItems={selectedItems}

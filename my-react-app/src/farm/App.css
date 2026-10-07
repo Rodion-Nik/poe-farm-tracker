@@ -79,6 +79,20 @@ body:has(.farm-page) {
   gap: 8px;
 }
 
+.farm-tab-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.farm-tab-delete {
+  min-height: 40px;
+  min-width: 32px;
+  padding: 0 8px;
+  font-size: 16px;
+  line-height: 1;
+}
+
 .side-panel {
   grid-column: 2;
   grid-row: 1;
