@@ -1,4 +1,4 @@
-import currency from "../ApiDataBase/currency.json"
+import { allItems, getItemPrice } from "../ApiDataBase"
 import { useState, useEffect } from 'react'
 import './App.css'
 
@@ -99,6 +99,8 @@ const ITEM_CATEGORIES = [
 ];
 
 function ItemSelectorPanel({setSelectedItems,selectedItems,currentDrop,setCurrentDrop,onClose}) {
+  const [activeCategory, setActiveCategory] = useState("Все");
+
   return (
     <section className="item-selector" aria-label="Выбор предметов">
       <aside className="item-selector-sidebar">
@@ -107,9 +109,8 @@ function ItemSelectorPanel({setSelectedItems,selectedItems,currentDrop,setCurren
             <button
               type="button"
               key={category}
-              className={category === "Все" ? "item-category is-active" : "item-category"}
-              aria-disabled="true"
-              title="Категория пока недоступна"
+              className={category === activeCategory ? "item-category is-active" : "item-category"}
+              onClick={() => setActiveCategory(category)}
             >
               {category}
             </button>
@@ -133,7 +134,7 @@ function ItemSelectorPanel({setSelectedItems,selectedItems,currentDrop,setCurren
         <h3 className="item-section-title" id="item-currency-title">Валюта</h3>
         <div className="item-scroll" role="region" aria-labelledby="item-currency-title" tabIndex={0}>
           <div className="item-grid">
-            {currency.items.map(cur => (
+            {allItems.map(cur => (
               <button
                 type="button"
                 key={cur.id}
@@ -156,12 +157,14 @@ function ItemSelectorPanel({setSelectedItems,selectedItems,currentDrop,setCurren
 function Main({
   selectedFarm
 }) {
-
+  const profit = (selectedFarm?.runs ?? []).reduce((total, run) =>
+    total + run.drop.reduce((sum, drop) => sum + drop.count * getItemPrice(drop.item), 0)
+  , 0);
 
   return (
     <div className="farm-summary">
       <h4 className="summary-card">количетсво ранов {selectedFarm?.runs?.length ?? 0}</h4>
-      <h4 className="summary-card">профит </h4>
+      <h4 className="summary-card">профит {profit.toFixed(2)} div</h4>
       <h4 className="summary-card">профит в час</h4>
       <h4 className="summary-card">общ затраты</h4>
     </div>
@@ -226,7 +229,7 @@ let idForDell = null
       <h4 className="run-number">номер забега: {(selectedFarm?.runs?.length ?? 0) + 1}</h4>
       <div className="run-drops">
       <span className="run-label">дроп:</span> {currentDrop.map((drop,index) =>{
-        const itemInfo = currency.items.find(cur=> cur.id === drop.item);
+        const itemInfo = allItems.find(cur=> cur.id === drop.item);
         return(
         <div className="drop-row" key={drop.item}>
           <img className="item-icon" src={`https://web.poecdn.com${itemInfo.image}`}/>
@@ -249,7 +252,7 @@ let idForDell = null
         <h4 className="run-title">забег: {index + 1} </h4>
         <div className="run-drops">
         <span className="run-label">дроп:</span> {runs.drop.map((drop,index) =>{
-        const itemInfo = currency.items.find(cur=> cur.id === drop.item);
+        const itemInfo = allItems.find(cur=> cur.id === drop.item);
         return(
         <div className="drop-row" key={index}>
           <img className="item-icon" src={`https://web.poecdn.com${itemInfo.image}`}/>:{drop.count}
