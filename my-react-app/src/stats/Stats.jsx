@@ -5,20 +5,20 @@ import './App.css'
 function Navboard() {
   return (
     <div className="my-div">
-    <button>Map Statistic</button>
-    <button>Farm Planer</button>
+    <button>Map statistics</button>
+    <button>Farm planner</button>
     </div>
   )
 }
 
 function LoadFileButton (){
   return (
-  <button>Load File</button>)
+  <button>Load file</button>)
 }
 
 function SelfMapWrite () {
   return (
-  <button>Self Write</button>)
+  <button>Enter manually</button>)
 }
 
 
@@ -41,7 +41,7 @@ function CreateNewArray ({arr}) {
   return (
     <div>
       <div>
-        <h1>Map visited: {completedaMap}</h1>
+        <h1>Maps visited: {completedaMap}</h1>
       </div>
       <div>
         {Object.entries(group).map(([name,visited]) =>(
