@@ -10,14 +10,6 @@ Track loot, record run durations, and compare farming results. The project is un
 
 No account is required. Farming data is stored locally in your browser.
 
-## Preview
-
-
-
-
-
-Screenshots show sample data and may differ from the latest version.
-
 ## Implemented features
 
 - Create, select, and delete farming sessions.
@@ -34,57 +26,44 @@ Screenshots show sample data and may differ from the latest version.
 
 **The current `Profit` and `Profit per hour` summaries represent loot value before expenses. Expense tracking and net profit calculations are not implemented yet.**
 
-## Price data
-
-The application uses 14 local JSON snapshots downloaded from the poe.ninja economy API. Prices are bundled with the website and updated manually using a separate script.
-
-The hosted application does not automatically fetch fresh prices.
-
-Saved runs store item quantities. Their displayed value is calculated using the price data bundled with the application, so updating prices can change the displayed value of earlier runs.
-
-## Data storage
-
-Sessions and saved runs are stored in localStorage for the current browser and site address.
-
-- Data is not shared with other visitors.
-- Data does not automatically sync between browsers or devices.
-- Clearing site data removes saved sessions.
-- Opening the application on another domain starts with separate local storage.
-
-There are currently no user accounts or cloud backups.
-
 ## Running locally
 
 Requires Node.js 22.12 or later and npm.
 
-Clone or download the repository, then open a terminal in the application directory containing `package.json` and run:
+Open a terminal in the `my-react-app` directory containing `package.json`, then run:
 
 ```bash
 npm install
 npm run dev
 ```
 
+If your terminal is in the parent `react` directory, enter the application directory first:
+
+```bash
+cd my-react-app
+```
+
 Open the local URL shown in the terminal.
 
 Click **Demo data** to explore a sample farming session, or create and select your own session to start recording runs.
 
-## Production build
+## Data storage
 
-From the application directory, run:
+Sessions and saved runs are stored in localStorage for the current browser and site address.
 
-```bash
-npm run build
-```
+- Data does not automatically sync between browsers or devices.
+- Clearing site data removes saved sessions.
+- Opening the application on another address starts with separate local storage.
 
-The generated `dist` directory contains the files needed for static hosting.
+There are currently no user accounts or cloud backups.
 
-To preview the production build locally:
+## Price data
 
-```bash
-npm run preview
-```
+The application uses 14 local JSON snapshots downloaded from the poe.ninja economy API. These files are updated manually using a separate script.
 
-The live demo is hosted on Cloudflare Workers using static assets. To publish an update, rebuild the application and upload the contents of the new `dist` directory.
+The application does not automatically fetch fresh prices.
+
+Saved runs store item quantities. Their displayed value is calculated using the loaded price data, so updating prices can change the displayed value of earlier runs.
 
 ## Updating price data
 
@@ -92,11 +71,7 @@ On Windows, run `update-poe2-api.bat` from the application's `src` directory.
 
 The script requires `curl.exe` and saves the downloaded JSON files to `src/ApiDataBase`.
 
-Before updating:
-
-1. Check the `LEAGUE` setting in the script.
-2. Run the script and check its success and failure summary.
-3. Rebuild and redeploy the application to publish the updated prices.
+Before updating, check the `LEAGUE` setting in the script. After running it, check the success and failure summary.
 
 PoE 2 economy data refreshes roughly hourly. Avoid unnecessary repeated downloads and follow the [poe.ninja API usage guidelines](https://poe.ninja/docs/api).
 
@@ -105,16 +80,7 @@ PoE 2 economy data refreshes roughly hourly. Avoid unnecessary repeated download
 - Track waystone and tablet expenses.
 - Calculate net profit and net profit per hour.
 - Set custom item prices.
-- Add support for more item categories:
-  - Unique Weapons
-  - Unique Armours
-  - Unique Accessories
-  - Unique Flasks
-  - Unique Charms
-  - Unique Jewels
-  - Unique Relics
-  - Unique Tablets
-  - Precursor Tablets
+- Add support for Unique Weapons, Unique Armours, Unique Accessories, Unique Flasks, Unique Charms, Unique Jewels, Unique Relics, Unique Tablets, and Precursor Tablets.
 - Support resource-based farming metrics, such as loot value per Hive Blood spent.
 
 ## Built with
