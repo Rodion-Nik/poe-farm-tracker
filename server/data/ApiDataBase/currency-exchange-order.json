@@ -1,0 +1,3045 @@
+{
+  "source": "https://poe2db.tw/us/Currency_Exchange",
+  "retrievedAt": "2026-10-12T15:20:32.040Z",
+  "categories": [
+    {
+      "name": "Currency",
+      "groups": [
+        {
+          "name": "Currency",
+          "items": [
+            {
+              "id": "aug",
+              "name": "Orb of Augmentation"
+            },
+            {
+              "id": "greater-orb-of-augmentation",
+              "name": "Greater Orb of Augmentation"
+            },
+            {
+              "id": "perfect-orb-of-augmentation",
+              "name": "Perfect Orb of Augmentation"
+            },
+            {
+              "id": "transmute",
+              "name": "Orb of Transmutation"
+            },
+            {
+              "id": "greater-orb-of-transmutation",
+              "name": "Greater Orb of Transmutation"
+            },
+            {
+              "id": "perfect-orb-of-transmutation",
+              "name": "Perfect Orb of Transmutation"
+            },
+            {
+              "id": "regal",
+              "name": "Regal Orb"
+            },
+            {
+              "id": "greater-regal-orb",
+              "name": "Greater Regal Orb"
+            },
+            {
+              "id": "perfect-regal-orb",
+              "name": "Perfect Regal Orb"
+            },
+            {
+              "id": "exalted",
+              "name": "Exalted Orb"
+            },
+            {
+              "id": "greater-exalted-orb",
+              "name": "Greater Exalted Orb"
+            },
+            {
+              "id": "perfect-exalted-orb",
+              "name": "Perfect Exalted Orb"
+            },
+            {
+              "id": "chaos",
+              "name": "Chaos Orb"
+            },
+            {
+              "id": "greater-chaos-orb",
+              "name": "Greater Chaos Orb"
+            },
+            {
+              "id": "perfect-chaos-orb",
+              "name": "Perfect Chaos Orb"
+            },
+            {
+              "id": "vaal",
+              "name": "Vaal Orb"
+            },
+            {
+              "id": "alch",
+              "name": "Orb of Alchemy"
+            },
+            {
+              "id": "divine",
+              "name": "Divine Orb"
+            },
+            {
+              "id": "chance",
+              "name": "Orb of Chance"
+            },
+            {
+              "id": "annul",
+              "name": "Orb of Annulment"
+            },
+            {
+              "id": "artificers",
+              "name": "Artificer's Orb"
+            },
+            {
+              "id": "fracturing-orb",
+              "name": "Fracturing Orb"
+            },
+            {
+              "id": "hinekoras-lock",
+              "name": "Hinekora's Lock"
+            },
+            {
+              "id": "mirror",
+              "name": "Mirror of Kalandra"
+            },
+            {
+              "id": "cryptic-key",
+              "name": "Cryptic Key"
+            }
+          ]
+        },
+        {
+          "name": "Jewellers' Currency",
+          "items": [
+            {
+              "id": "lesser-jewellers-orb",
+              "name": "Lesser Jeweller's Orb"
+            },
+            {
+              "id": "greater-jewellers-orb",
+              "name": "Greater Jeweller's Orb"
+            },
+            {
+              "id": "perfect-jewellers-orb",
+              "name": "Perfect Jeweller's Orb"
+            }
+          ]
+        },
+        {
+          "name": "Currency Shards",
+          "items": [
+            {
+              "id": "transmutation-shard",
+              "name": "Transmutation Shard"
+            },
+            {
+              "id": "regal-shard",
+              "name": "Regal Shard"
+            },
+            {
+              "id": "artificers-shard",
+              "name": "Artificer's Shard"
+            },
+            {
+              "id": "chance-shard",
+              "name": "Chance Shard"
+            }
+          ]
+        },
+        {
+          "name": "Quality Currency",
+          "items": [
+            {
+              "id": "scrap",
+              "name": "Armourer's Scrap"
+            },
+            {
+              "id": "whetstone",
+              "name": "Blacksmith's Whetstone"
+            },
+            {
+              "id": "etcher",
+              "name": "Arcanist's Etcher"
+            },
+            {
+              "id": "bauble",
+              "name": "Glassblower's Bauble"
+            },
+            {
+              "id": "gcp",
+              "name": "Gemcutter's Prism"
+            }
+          ]
+        },
+        {
+          "name": "Identification Currency",
+          "items": [
+            {
+              "id": "wisdom",
+              "name": "Scroll of Wisdom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Essences",
+      "groups": [
+        {
+          "name": "Lesser Essences",
+          "items": [
+            {
+              "id": null,
+              "name": "Lesser Essence of the Body"
+            },
+            {
+              "id": "lesser-essence-of-the-mind",
+              "name": "Lesser Essence of the Mind"
+            },
+            {
+              "id": "lesser-essence-of-enhancement",
+              "name": "Lesser Essence of Enhancement"
+            },
+            {
+              "id": "lesser-essence-of-abrasion",
+              "name": "Lesser Essence of Abrasion"
+            },
+            {
+              "id": null,
+              "name": "Lesser Essence of Flames"
+            },
+            {
+              "id": "lesser-essence-of-insulation",
+              "name": "Lesser Essence of Insulation"
+            },
+            {
+              "id": "lesser-essence-of-ice",
+              "name": "Lesser Essence of Ice"
+            },
+            {
+              "id": "lesser-essence-of-thawing",
+              "name": "Lesser Essence of Thawing"
+            },
+            {
+              "id": "lesser-essence-of-electricity",
+              "name": "Lesser Essence of Electricity"
+            },
+            {
+              "id": "lesser-essence-of-grounding",
+              "name": "Lesser Essence of Grounding"
+            },
+            {
+              "id": null,
+              "name": "Lesser Essence of Ruin"
+            },
+            {
+              "id": null,
+              "name": "Lesser Essence of Command"
+            },
+            {
+              "id": "lesser-essence-of-battle",
+              "name": "Lesser Essence of Battle"
+            },
+            {
+              "id": "lesser-essence-of-sorcery",
+              "name": "Lesser Essence of Sorcery"
+            },
+            {
+              "id": "lesser-essence-of-haste",
+              "name": "Lesser Essence of Haste"
+            },
+            {
+              "id": "lesser-essence-of-alacrity",
+              "name": "Lesser Essence of Alacrity"
+            },
+            {
+              "id": null,
+              "name": "Lesser Essence of the Infinite"
+            },
+            {
+              "id": "lesser-essence-of-seeking",
+              "name": "Lesser Essence of Seeking"
+            },
+            {
+              "id": "lesser-essence-of-opulence",
+              "name": "Lesser Essence of Opulence"
+            }
+          ]
+        },
+        {
+          "name": "Essences",
+          "items": [
+            {
+              "id": "essence-of-the-body",
+              "name": "Essence of the Body"
+            },
+            {
+              "id": null,
+              "name": "Essence of the Mind"
+            },
+            {
+              "id": "essence-of-enhancement",
+              "name": "Essence of Enhancement"
+            },
+            {
+              "id": "essence-of-abrasion",
+              "name": "Essence of Abrasion"
+            },
+            {
+              "id": "essence-of-flames",
+              "name": "Essence of Flames"
+            },
+            {
+              "id": "essence-of-insulation",
+              "name": "Essence of Insulation"
+            },
+            {
+              "id": "essence-of-ice",
+              "name": "Essence of Ice"
+            },
+            {
+              "id": "essence-of-thawing",
+              "name": "Essence of Thawing"
+            },
+            {
+              "id": "essence-of-electricity",
+              "name": "Essence of Electricity"
+            },
+            {
+              "id": "essence-of-grounding",
+              "name": "Essence of Grounding"
+            },
+            {
+              "id": "essence-of-ruin",
+              "name": "Essence of Ruin"
+            },
+            {
+              "id": "essence-of-command",
+              "name": "Essence of Command"
+            },
+            {
+              "id": "essence-of-battle",
+              "name": "Essence of Battle"
+            },
+            {
+              "id": "essence-of-sorcery",
+              "name": "Essence of Sorcery"
+            },
+            {
+              "id": "essence-of-haste",
+              "name": "Essence of Haste"
+            },
+            {
+              "id": "essence-of-alacrity",
+              "name": "Essence of Alacrity"
+            },
+            {
+              "id": "essence-of-the-infinite",
+              "name": "Essence of the Infinite"
+            },
+            {
+              "id": "essence-of-seeking",
+              "name": "Essence of Seeking"
+            },
+            {
+              "id": "essence-of-opulence",
+              "name": "Essence of Opulence"
+            }
+          ]
+        },
+        {
+          "name": "Greater Essences",
+          "items": [
+            {
+              "id": "greater-essence-of-the-body",
+              "name": "Greater Essence of the Body"
+            },
+            {
+              "id": "greater-essence-of-the-mind",
+              "name": "Greater Essence of the Mind"
+            },
+            {
+              "id": "greater-essence-of-enhancement",
+              "name": "Greater Essence of Enhancement"
+            },
+            {
+              "id": "greater-essence-of-the-infinite",
+              "name": "Greater Essence of the Infinite"
+            },
+            {
+              "id": "greater-essence-of-flames",
+              "name": "Greater Essence of Flames"
+            },
+            {
+              "id": "greater-essence-of-insulation",
+              "name": "Greater Essence of Insulation"
+            },
+            {
+              "id": "greater-essence-of-ice",
+              "name": "Greater Essence of Ice"
+            },
+            {
+              "id": "greater-essence-of-thawing",
+              "name": "Greater Essence of Thawing"
+            },
+            {
+              "id": "greater-essence-of-electricity",
+              "name": "Greater Essence of Electricity"
+            },
+            {
+              "id": "greater-essence-of-grounding",
+              "name": "Greater Essence of Grounding"
+            },
+            {
+              "id": "greater-essence-of-abrasion",
+              "name": "Greater Essence of Abrasion"
+            },
+            {
+              "id": "greater-essence-of-battle",
+              "name": "Greater Essence of Battle"
+            },
+            {
+              "id": "greater-essence-of-sorcery",
+              "name": "Greater Essence of Sorcery"
+            },
+            {
+              "id": "greater-essence-of-ruin",
+              "name": "Greater Essence of Ruin"
+            },
+            {
+              "id": "greater-essence-of-command",
+              "name": "Greater Essence of Command"
+            },
+            {
+              "id": "greater-essence-of-haste",
+              "name": "Greater Essence of Haste"
+            },
+            {
+              "id": "greater-essence-of-alacrity",
+              "name": "Greater Essence of Alacrity"
+            },
+            {
+              "id": "greater-essence-of-seeking",
+              "name": "Greater Essence of Seeking"
+            },
+            {
+              "id": "greater-essence-of-opulence",
+              "name": "Greater Essence of Opulence"
+            }
+          ]
+        },
+        {
+          "name": "Perfect Essences",
+          "items": [
+            {
+              "id": "perfect-essence-of-the-body",
+              "name": "Perfect Essence of the Body"
+            },
+            {
+              "id": "perfect-essence-of-the-mind",
+              "name": "Perfect Essence of the Mind"
+            },
+            {
+              "id": "perfect-essence-of-enhancement",
+              "name": "Perfect Essence of Enhancement"
+            },
+            {
+              "id": "perfect-essence-of-abrasion",
+              "name": "Perfect Essence of Abrasion"
+            },
+            {
+              "id": "perfect-essence-of-flames",
+              "name": "Perfect Essence of Flames"
+            },
+            {
+              "id": "perfect-essence-of-insulation",
+              "name": "Perfect Essence of Insulation"
+            },
+            {
+              "id": "perfect-essence-of-ice",
+              "name": "Perfect Essence of Ice"
+            },
+            {
+              "id": "perfect-essence-of-thawing",
+              "name": "Perfect Essence of Thawing"
+            },
+            {
+              "id": "perfect-essence-of-electricity",
+              "name": "Perfect Essence of Electricity"
+            },
+            {
+              "id": "perfect-essence-of-grounding",
+              "name": "Perfect Essence of Grounding"
+            },
+            {
+              "id": "perfect-essence-of-ruin",
+              "name": "Perfect Essence of Ruin"
+            },
+            {
+              "id": "perfect-essence-of-command",
+              "name": "Perfect Essence of Command"
+            },
+            {
+              "id": "perfect-essence-of-battle",
+              "name": "Perfect Essence of Battle"
+            },
+            {
+              "id": "perfect-essence-of-sorcery",
+              "name": "Perfect Essence of Sorcery"
+            },
+            {
+              "id": "perfect-essence-of-haste",
+              "name": "Perfect Essence of Haste"
+            },
+            {
+              "id": "perfect-essence-of-alacrity",
+              "name": "Perfect Essence of Alacrity"
+            },
+            {
+              "id": "perfect-essence-of-the-infinite",
+              "name": "Perfect Essence of the Infinite"
+            },
+            {
+              "id": "perfect-essence-of-seeking",
+              "name": "Perfect Essence of Seeking"
+            },
+            {
+              "id": "perfect-essence-of-opulence",
+              "name": "Perfect Essence of Opulence"
+            }
+          ]
+        },
+        {
+          "name": "Corrupted Essences",
+          "items": [
+            {
+              "id": "essence-of-hysteria",
+              "name": "Essence of Hysteria"
+            },
+            {
+              "id": "essence-of-delirium",
+              "name": "Essence of Delirium"
+            },
+            {
+              "id": "essence-of-horror",
+              "name": "Essence of Horror"
+            },
+            {
+              "id": "essence-of-insanity",
+              "name": "Essence of Insanity"
+            },
+            {
+              "id": "essence-of-the-abyss",
+              "name": "Essence of the Abyss"
+            },
+            {
+              "id": "essence-of-the-breach",
+              "name": "Essence of the Breach"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Delirium",
+      "groups": [
+        {
+          "name": "Delirium",
+          "items": [
+            {
+              "id": "simulacrum-splinter",
+              "name": "Simulacrum Splinter"
+            },
+            {
+              "id": "simulacrum",
+              "name": "Simulacrum"
+            },
+            {
+              "id": "ravens-reflection",
+              "name": "Raven's Reflection"
+            },
+            {
+              "id": "raven-touched-shard",
+              "name": "Raven-Touched Shard"
+            }
+          ]
+        },
+        {
+          "name": "Liquid Emotions",
+          "items": [
+            {
+              "id": "diluted-liquid-ire",
+              "name": "Diluted Liquid Ire"
+            },
+            {
+              "id": "diluted-liquid-guilt",
+              "name": "Diluted Liquid Guilt"
+            },
+            {
+              "id": "diluted-liquid-greed",
+              "name": "Diluted Liquid Greed"
+            },
+            {
+              "id": "liquid-paranoia",
+              "name": "Liquid Paranoia"
+            },
+            {
+              "id": "liquid-envy",
+              "name": "Liquid Envy"
+            },
+            {
+              "id": "liquid-disgust",
+              "name": "Liquid Disgust"
+            },
+            {
+              "id": "liquid-despair",
+              "name": "Liquid Despair"
+            },
+            {
+              "id": "concentrated-liquid-fear",
+              "name": "Concentrated Liquid Fear"
+            },
+            {
+              "id": "concentrated-liquid-suffering",
+              "name": "Concentrated Liquid Suffering"
+            },
+            {
+              "id": "concentrated-liquid-isolation",
+              "name": "Concentrated Liquid Isolation"
+            },
+            {
+              "id": "ancient-diluted-liquid-ire",
+              "name": "Ancient Diluted Liquid Ire"
+            },
+            {
+              "id": "ancient-diluted-liquid-guilt",
+              "name": "Ancient Diluted Liquid Guilt"
+            },
+            {
+              "id": "ancient-diluted-liquid-greed",
+              "name": "Ancient Diluted Liquid Greed"
+            },
+            {
+              "id": "ancient-liquid-paranoia",
+              "name": "Ancient Liquid Paranoia"
+            },
+            {
+              "id": "ancient-liquid-envy",
+              "name": "Ancient Liquid Envy"
+            },
+            {
+              "id": "ancient-liquid-disgust",
+              "name": "Ancient Liquid Disgust"
+            },
+            {
+              "id": "ancient-liquid-despair",
+              "name": "Ancient Liquid Despair"
+            },
+            {
+              "id": "ancient-concentrated-liquid-fear",
+              "name": "Ancient Concentrated Liquid Fear"
+            },
+            {
+              "id": "ancient-concentrated-liquid-suffering",
+              "name": "Ancient Concentrated Liquid Suffering"
+            },
+            {
+              "id": "ancient-concentrated-liquid-isolation",
+              "name": "Ancient Concentrated Liquid Isolation"
+            },
+            {
+              "id": "potent-liquid-melancholy",
+              "name": "Potent Liquid Melancholy"
+            },
+            {
+              "id": "potent-liquid-ferocity",
+              "name": "Potent Liquid Ferocity"
+            },
+            {
+              "id": "potent-liquid-contempt",
+              "name": "Potent Liquid Contempt"
+            },
+            {
+              "id": "ancient-potent-liquid-melancholy",
+              "name": "Ancient Potent Liquid Melancholy"
+            },
+            {
+              "id": "ancient-potent-liquid-ferocity",
+              "name": "Ancient Potent Liquid Ferocity"
+            },
+            {
+              "id": "ancient-potent-liquid-contempt",
+              "name": "Ancient Potent Liquid Contempt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Breach",
+      "groups": [
+        {
+          "name": "Breach",
+          "items": [
+            {
+              "id": "breach-splinter",
+              "name": "Breach Splinter"
+            },
+            {
+              "id": "breachstone",
+              "name": "Breachstone"
+            }
+          ]
+        },
+        {
+          "name": "Catalysts",
+          "items": [
+            {
+              "id": "flesh-catalyst",
+              "name": "Flesh Catalyst"
+            },
+            {
+              "id": "neural-catalyst",
+              "name": "Neural Catalyst"
+            },
+            {
+              "id": "carapace-catalyst",
+              "name": "Carapace Catalyst"
+            },
+            {
+              "id": "adaptive-catalyst",
+              "name": "Adaptive Catalyst"
+            },
+            {
+              "id": "xophs-catalyst",
+              "name": "Xoph's Catalyst"
+            },
+            {
+              "id": "tuls-catalyst",
+              "name": "Tul's Catalyst"
+            },
+            {
+              "id": "eshs-catalyst",
+              "name": "Esh's Catalyst"
+            },
+            {
+              "id": "uul-netols-catalyst",
+              "name": "Uul-Netol's Catalyst"
+            },
+            {
+              "id": "reaver-catalyst",
+              "name": "Reaver Catalyst"
+            },
+            {
+              "id": "sibilant-catalyst",
+              "name": "Sibilant Catalyst"
+            },
+            {
+              "id": "chayulas-catalyst",
+              "name": "Chayula's Catalyst"
+            },
+            {
+              "id": "skittering-catalyst",
+              "name": "Skittering Catalyst"
+            },
+            {
+              "id": "necrotic-catalyst",
+              "name": "Necrotic Catalyst"
+            },
+            {
+              "id": "refined-flesh-catalyst",
+              "name": "Refined Flesh Catalyst"
+            },
+            {
+              "id": "refined-neural-catalyst",
+              "name": "Refined Neural Catalyst"
+            },
+            {
+              "id": "refined-carapace-catalyst",
+              "name": "Refined Carapace Catalyst"
+            },
+            {
+              "id": "refined-uul-netols-catalyst",
+              "name": "Refined Uul-Netol's Catalyst"
+            },
+            {
+              "id": "refined-xophs-catalyst",
+              "name": "Refined Xoph's Catalyst"
+            },
+            {
+              "id": "refined-tuls-catalyst",
+              "name": "Refined Tul's Catalyst"
+            },
+            {
+              "id": "refined-eshs-catalyst",
+              "name": "Refined Esh's Catalyst"
+            },
+            {
+              "id": "refined-chayulas-catalyst",
+              "name": "Refined Chayula's Catalyst"
+            },
+            {
+              "id": "refined-reaver-catalyst",
+              "name": "Refined Reaver Catalyst"
+            },
+            {
+              "id": "refined-sibilant-catalyst",
+              "name": "Refined Sibilant Catalyst"
+            },
+            {
+              "id": "refined-skittering-catalyst",
+              "name": "Refined Skittering Catalyst"
+            },
+            {
+              "id": "refined-adaptive-catalyst",
+              "name": "Refined Adaptive Catalyst"
+            },
+            {
+              "id": "refined-necrotic-catalyst",
+              "name": "Refined Necrotic Catalyst"
+            }
+          ]
+        },
+        {
+          "name": "Pinnacle Fragments",
+          "items": [
+            {
+              "id": "breachlord-sac",
+              "name": "Breachlord Sac"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Abyss",
+      "groups": [
+        {
+          "name": "Abyssal Bones",
+          "items": [
+            {
+              "id": "gnawed-jawbone",
+              "name": "Gnawed Jawbone"
+            },
+            {
+              "id": "preserved-jawbone",
+              "name": "Preserved Jawbone"
+            },
+            {
+              "id": "ancient-jawbone",
+              "name": "Ancient Jawbone"
+            },
+            {
+              "id": "gnawed-rib",
+              "name": "Gnawed Rib"
+            },
+            {
+              "id": "preserved-rib",
+              "name": "Preserved Rib"
+            },
+            {
+              "id": "ancient-rib",
+              "name": "Ancient Rib"
+            },
+            {
+              "id": "gnawed-collarbone",
+              "name": "Gnawed Collarbone"
+            },
+            {
+              "id": "preserved-collarbone",
+              "name": "Preserved Collarbone"
+            },
+            {
+              "id": "ancient-collarbone",
+              "name": "Ancient Collarbone"
+            },
+            {
+              "id": "preserved-cranium",
+              "name": "Preserved Cranium"
+            },
+            {
+              "id": null,
+              "name": "Preserved Vertebrae"
+            },
+            {
+              "id": "altered-collarbone",
+              "name": "Altered Collarbone"
+            }
+          ]
+        },
+        {
+          "name": "Omens",
+          "items": [
+            {
+              "id": "omen-of-abyssal-echoes",
+              "name": "Omen of Abyssal Echoes"
+            },
+            {
+              "id": "omen-of-the-sovereign",
+              "name": "Omen of the Sovereign"
+            },
+            {
+              "id": "omen-of-the-liege",
+              "name": "Omen of the Liege"
+            },
+            {
+              "id": "omen-of-the-blackblooded",
+              "name": "Omen of the Blackblooded"
+            },
+            {
+              "id": "omen-of-putrefaction",
+              "name": "Omen of Putrefaction"
+            },
+            {
+              "id": "omen-of-light",
+              "name": "Omen of Light"
+            },
+            {
+              "id": "omen-of-sinistral-necromancy",
+              "name": "Omen of Sinistral Necromancy"
+            },
+            {
+              "id": "omen-of-dextral-necromancy",
+              "name": "Omen of Dextral Necromancy"
+            }
+          ]
+        },
+        {
+          "name": "Pinnacle Fragments",
+          "items": [
+            {
+              "id": "kulemaks-invitation",
+              "name": "Kulemak's Invitation"
+            }
+          ]
+        },
+        {
+          "name": "Abyssal Eyes",
+          "items": [
+            {
+              "id": "amanamus-gaze",
+              "name": "Amanamu's Gaze"
+            },
+            {
+              "id": "tecrods-gaze",
+              "name": "Tecrod's Gaze"
+            },
+            {
+              "id": "kurgals-gaze",
+              "name": "Kurgal's Gaze"
+            },
+            {
+              "id": "ulamans-gaze",
+              "name": "Ulaman's Gaze"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Atziri's Temple",
+      "groups": [
+        {
+          "name": "Currency",
+          "items": [
+            {
+              "id": "architects-orb",
+              "name": "Architect's Orb"
+            },
+            {
+              "id": "crystallised-corruption",
+              "name": "Crystallised Corruption"
+            },
+            {
+              "id": "core-destabiliser",
+              "name": "Core Destabiliser"
+            },
+            {
+              "id": "ancient-infuser",
+              "name": "Ancient Infuser"
+            },
+            {
+              "id": "vaal-cultivation-orb",
+              "name": "Vaal Cultivation Orb"
+            },
+            {
+              "id": "yaomacs-orb-of-sacrifice",
+              "name": "Yaomac's Orb of Sacrifice"
+            },
+            {
+              "id": "kopecs-orb-of-sacrifice",
+              "name": "Kopec's Orb of Sacrifice"
+            },
+            {
+              "id": "kamasas-orb-of-sacrifice",
+              "name": "Kamasa's Orb of Sacrifice"
+            },
+            {
+              "id": "yuguls-orb-of-sacrifice",
+              "name": "Yugul's Orb of Sacrifice"
+            },
+            {
+              "id": "vaal-armourers-infuser",
+              "name": "Vaal Armourer's Infuser"
+            },
+            {
+              "id": "vaal-blacksmiths-infuser",
+              "name": "Vaal Blacksmith's Infuser"
+            },
+            {
+              "id": "vaal-arcanists-infuser",
+              "name": "Vaal Arcanist's Infuser"
+            },
+            {
+              "id": "vaal-catalysing-infuser",
+              "name": "Vaal Catalysing Infuser"
+            },
+            {
+              "id": "orb-of-extraction",
+              "name": "Orb of Extraction"
+            },
+            {
+              "id": "vaal-siphoner",
+              "name": "Vaal Siphoner"
+            }
+          ]
+        },
+        {
+          "name": "Soul Cores",
+          "items": [
+            {
+              "id": "guatelitzis-thesis",
+              "name": "Guatelitzi's Thesis"
+            },
+            {
+              "id": "citaqualotls-thesis",
+              "name": "Citaqualotl's Thesis"
+            },
+            {
+              "id": "jiquanis-thesis",
+              "name": "Jiquani's Thesis"
+            },
+            {
+              "id": "quipolatls-thesis",
+              "name": "Quipolatl's Thesis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fragments",
+      "groups": [
+        {
+          "name": "Ultimatum Fragments",
+          "items": [
+            {
+              "id": "cowardly-fate",
+              "name": "Cowardly Fate"
+            },
+            {
+              "id": "deadly-fate",
+              "name": "Deadly Fate"
+            },
+            {
+              "id": "victorious-fate",
+              "name": "Victorious Fate"
+            }
+          ]
+        },
+        {
+          "name": "Pinnacle Fragments",
+          "items": [
+            {
+              "id": "ancient-crisis-fragment",
+              "name": "Ancient Crisis Fragment"
+            },
+            {
+              "id": "faded-crisis-fragment",
+              "name": "Faded Crisis Fragment"
+            },
+            {
+              "id": "weathered-crisis-fragment",
+              "name": "Weathered Crisis Fragment"
+            },
+            {
+              "id": "origin-cradle",
+              "name": "Origin Cradle"
+            },
+            {
+              "id": "origin-spark",
+              "name": "Origin Spark"
+            },
+            {
+              "id": "origin-core",
+              "name": "Origin Core"
+            },
+            {
+              "id": "call-of-the-shadows",
+              "name": "Call of the Shadows"
+            }
+          ]
+        },
+        {
+          "name": "Reliquary Keys",
+          "items": [
+            {
+              "id": "twilight-reliquary-key",
+              "name": "Twilight Reliquary Key"
+            },
+            {
+              "id": "xeshts-reliquary-key",
+              "name": "Xesht's Reliquary Key"
+            },
+            {
+              "id": "the-trialmasters-reliquary-key",
+              "name": "The Trialmaster's Reliquary Key"
+            },
+            {
+              "id": "ritualistic-reliquary-key",
+              "name": "Ritualistic Reliquary Key"
+            },
+            {
+              "id": "tangmazus-reliquary-key",
+              "name": "Tangmazu's Reliquary Key"
+            },
+            {
+              "id": "olroths-reliquary-key",
+              "name": "Olroth's Reliquary Key"
+            },
+            {
+              "id": "the-arbiters-reliquary-key",
+              "name": "The Arbiter's Reliquary Key"
+            },
+            {
+              "id": "against-the-darkness",
+              "name": "Zarokh's Reliquary Key: Against the Darkness"
+            },
+            {
+              "id": null,
+              "name": "Zarokh's Reliquary Key: Sandstorm Visage"
+            },
+            {
+              "id": null,
+              "name": "Zarokh's Reliquary Key: Blessed Bonds"
+            },
+            {
+              "id": null,
+              "name": "Zarokh's Reliquary Key: Sekhema's Resolve"
+            },
+            {
+              "id": null,
+              "name": "Zarokh's Reliquary Key: Temporalis"
+            },
+            {
+              "id": "azmeri-reliquary-key",
+              "name": "Azmeri Reliquary Key"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runes",
+      "groups": [
+        {
+          "name": "Runes",
+          "items": [
+            {
+              "id": "lesser-desert-rune",
+              "name": "Lesser Desert Rune"
+            },
+            {
+              "id": "desert-rune",
+              "name": "Desert Rune"
+            },
+            {
+              "id": "greater-desert-rune",
+              "name": "Greater Desert Rune"
+            },
+            {
+              "id": "lesser-glacial-rune",
+              "name": "Lesser Glacial Rune"
+            },
+            {
+              "id": "glacial-rune",
+              "name": "Glacial Rune"
+            },
+            {
+              "id": "greater-glacial-rune",
+              "name": "Greater Glacial Rune"
+            },
+            {
+              "id": "lesser-storm-rune",
+              "name": "Lesser Storm Rune"
+            },
+            {
+              "id": "storm-rune",
+              "name": "Storm Rune"
+            },
+            {
+              "id": "greater-storm-rune",
+              "name": "Greater Storm Rune"
+            },
+            {
+              "id": "lesser-iron-rune",
+              "name": "Lesser Iron Rune"
+            },
+            {
+              "id": "iron-rune",
+              "name": "Iron Rune"
+            },
+            {
+              "id": "greater-iron-rune",
+              "name": "Greater Iron Rune"
+            },
+            {
+              "id": "lesser-body-rune",
+              "name": "Lesser Body Rune"
+            },
+            {
+              "id": "body-rune",
+              "name": "Body Rune"
+            },
+            {
+              "id": "greater-body-rune",
+              "name": "Greater Body Rune"
+            },
+            {
+              "id": "lesser-mind-rune",
+              "name": "Lesser Mind Rune"
+            },
+            {
+              "id": "mind-rune",
+              "name": "Mind Rune"
+            },
+            {
+              "id": "greater-mind-rune",
+              "name": "Greater Mind Rune"
+            },
+            {
+              "id": "lesser-vision-rune",
+              "name": "Lesser Vision Rune"
+            },
+            {
+              "id": null,
+              "name": "Vision Rune"
+            },
+            {
+              "id": "greater-vision-rune",
+              "name": "Greater Vision Rune"
+            },
+            {
+              "id": "lesser-rebirth-rune",
+              "name": "Lesser Rebirth Rune"
+            },
+            {
+              "id": "rebirth-rune",
+              "name": "Rebirth Rune"
+            },
+            {
+              "id": "greater-rebirth-rune",
+              "name": "Greater Rebirth Rune"
+            },
+            {
+              "id": "lesser-inspiration-rune",
+              "name": "Lesser Inspiration Rune"
+            },
+            {
+              "id": null,
+              "name": "Inspiration Rune"
+            },
+            {
+              "id": "greater-inspiration-rune",
+              "name": "Greater Inspiration Rune"
+            },
+            {
+              "id": null,
+              "name": "Lesser Stone Rune"
+            },
+            {
+              "id": "stone-rune",
+              "name": "Stone Rune"
+            },
+            {
+              "id": "greater-stone-rune",
+              "name": "Greater Stone Rune"
+            },
+            {
+              "id": "lesser-robust-rune",
+              "name": "Lesser Robust Rune"
+            },
+            {
+              "id": "robust-rune",
+              "name": "Robust Rune"
+            },
+            {
+              "id": "greater-robust-rune",
+              "name": "Greater Robust Rune"
+            },
+            {
+              "id": "lesser-adept-rune",
+              "name": "Lesser Adept Rune"
+            },
+            {
+              "id": "adept-rune",
+              "name": "Adept Rune"
+            },
+            {
+              "id": "greater-adept-rune",
+              "name": "Greater Adept Rune"
+            },
+            {
+              "id": "lesser-resolve-rune",
+              "name": "Lesser Resolve Rune"
+            },
+            {
+              "id": "resolve-rune",
+              "name": "Resolve Rune"
+            },
+            {
+              "id": "greater-resolve-rune",
+              "name": "Greater Resolve Rune"
+            },
+            {
+              "id": "masterwork-rune",
+              "name": "Masterwork Rune"
+            },
+            {
+              "id": "lesser-ward-rune",
+              "name": "Lesser Ward Rune"
+            },
+            {
+              "id": "ward-rune",
+              "name": "Ward Rune"
+            },
+            {
+              "id": "greater-ward-rune",
+              "name": "Greater Ward Rune"
+            },
+            {
+              "id": null,
+              "name": "Lesser Charging Rune"
+            },
+            {
+              "id": null,
+              "name": "Charging Rune"
+            },
+            {
+              "id": "greater-charging-rune",
+              "name": "Greater Charging Rune"
+            }
+          ]
+        },
+        {
+          "name": "Perfect Runes",
+          "items": [
+            {
+              "id": "perfect-desert-rune",
+              "name": "Perfect Desert Rune"
+            },
+            {
+              "id": "perfect-glacial-rune",
+              "name": "Perfect Glacial Rune"
+            },
+            {
+              "id": "perfect-storm-rune",
+              "name": "Perfect Storm Rune"
+            },
+            {
+              "id": "perfect-iron-rune",
+              "name": "Perfect Iron Rune"
+            },
+            {
+              "id": "perfect-body-rune",
+              "name": "Perfect Body Rune"
+            },
+            {
+              "id": "perfect-mind-rune",
+              "name": "Perfect Mind Rune"
+            },
+            {
+              "id": "perfect-rebirth-rune",
+              "name": "Perfect Rebirth Rune"
+            },
+            {
+              "id": "perfect-inspiration-rune",
+              "name": "Perfect Inspiration Rune"
+            },
+            {
+              "id": "perfect-stone-rune",
+              "name": "Perfect Stone Rune"
+            },
+            {
+              "id": "perfect-vision-rune",
+              "name": "Perfect Vision Rune"
+            },
+            {
+              "id": "perfect-robust-rune",
+              "name": "Perfect Robust Rune"
+            },
+            {
+              "id": "perfect-adept-rune",
+              "name": "Perfect Adept Rune"
+            },
+            {
+              "id": "perfect-resolve-rune",
+              "name": "Perfect Resolve Rune"
+            },
+            {
+              "id": "perfect-ward-rune",
+              "name": "Perfect Ward Rune"
+            },
+            {
+              "id": "perfect-charging-rune",
+              "name": "Perfect Charging Rune"
+            }
+          ]
+        },
+        {
+          "name": "Greater Runes",
+          "items": [
+            {
+              "id": "greater-rune-of-leadership",
+              "name": "Greater Rune of Leadership"
+            },
+            {
+              "id": "greater-rune-of-tithing",
+              "name": "Greater Rune of Tithing"
+            },
+            {
+              "id": "greater-rune-of-alacrity",
+              "name": "Greater Rune of Alacrity"
+            },
+            {
+              "id": "greater-rune-of-nobility",
+              "name": "Greater Rune of Nobility"
+            },
+            {
+              "id": "farruls-rune-of-the-hunt",
+              "name": "Farrul's Rune of the Hunt"
+            },
+            {
+              "id": "thane-myrks-rune-of-summer",
+              "name": "Thane Myrk's Rune of Summer"
+            },
+            {
+              "id": "lady-hestras-rune-of-winter",
+              "name": "Lady Hestra's Rune of Winter"
+            },
+            {
+              "id": "thane-lelds-rune-of-spring",
+              "name": "Thane Leld's Rune of Spring"
+            },
+            {
+              "id": "fenumus-rune-of-agony",
+              "name": "Fenumus' Rune of Agony"
+            },
+            {
+              "id": "thane-girts-rune-of-wildness",
+              "name": "Thane Girt's Rune of Wildness"
+            },
+            {
+              "id": "hedgewitch-assandras-rune-of-wisdom",
+              "name": "Hedgewitch Assandra's Rune of Wisdom"
+            },
+            {
+              "id": "saqawals-rune-of-the-sky",
+              "name": "Saqawal's Rune of the Sky"
+            },
+            {
+              "id": "the-greatwolfs-rune-of-willpower",
+              "name": "The Greatwolf's Rune of Willpower"
+            },
+            {
+              "id": "craiceanns-rune-of-recovery",
+              "name": "Craiceann's Rune of Recovery"
+            },
+            {
+              "id": "craiceanns-rune-of-warding",
+              "name": "Craiceann's Rune of Warding"
+            },
+            {
+              "id": "countess-seskes-rune-of-archery",
+              "name": "Countess Seske's Rune of Archery"
+            },
+            {
+              "id": "saqawals-rune-of-erosion",
+              "name": "Saqawal's Rune of Erosion"
+            },
+            {
+              "id": "saqawals-rune-of-memory",
+              "name": "Saqawal's Rune of Memory"
+            },
+            {
+              "id": "the-greatwolfs-rune-of-claws",
+              "name": "The Greatwolf's Rune of Claws"
+            },
+            {
+              "id": "courtesan-mannans-rune-of-cruelty",
+              "name": "Courtesan Mannan's Rune of Cruelty"
+            },
+            {
+              "id": "thane-grannells-rune-of-mastery",
+              "name": "Thane Grannell's Rune of Mastery"
+            },
+            {
+              "id": "fenumus-rune-of-spinning",
+              "name": "Fenumus' Rune of Spinning"
+            },
+            {
+              "id": "fenumus-rune-of-draining",
+              "name": "Fenumus' Rune of Draining"
+            },
+            {
+              "id": "farruls-rune-of-grace",
+              "name": "Farrul's Rune of Grace"
+            },
+            {
+              "id": "farruls-rune-of-the-chase",
+              "name": "Farrul's Rune of the Chase"
+            },
+            {
+              "id": "ancient-rune-of-splinters",
+              "name": "Ancient Rune of Splinters"
+            },
+            {
+              "id": "ancient-rune-of-dueling",
+              "name": "Ancient Rune of Dueling"
+            },
+            {
+              "id": "ancient-rune-of-the-titan",
+              "name": "Ancient Rune of the Titan"
+            },
+            {
+              "id": "ancient-rune-of-shattering",
+              "name": "Ancient Rune of Shattering"
+            },
+            {
+              "id": "ancient-rune-of-prowess",
+              "name": "Ancient Rune of Prowess"
+            },
+            {
+              "id": null,
+              "name": "Ancient Rune of Control"
+            },
+            {
+              "id": "ancient-rune-of-discovery",
+              "name": "Ancient Rune of Discovery"
+            },
+            {
+              "id": "ancient-rune-of-decay",
+              "name": "Ancient Rune of Decay"
+            },
+            {
+              "id": "ancient-rune-of-witchcraft",
+              "name": "Ancient Rune of Witchcraft"
+            },
+            {
+              "id": "ancient-rune-of-the-horde",
+              "name": "Ancient Rune of the Horde"
+            },
+            {
+              "id": "ancient-rune-of-animosity",
+              "name": "Ancient Rune of Animosity"
+            },
+            {
+              "id": "ancient-rune-of-detonation",
+              "name": "Ancient Rune of Detonation"
+            },
+            {
+              "id": "ancient-rune-of-retaliation",
+              "name": "Ancient Rune of Retaliation"
+            },
+            {
+              "id": "rune-of-vitality",
+              "name": "Rune of Vitality"
+            },
+            {
+              "id": "rune-of-the-hunt",
+              "name": "Rune of the Hunt"
+            },
+            {
+              "id": "rune-of-acrobatics",
+              "name": "Rune of Acrobatics"
+            },
+            {
+              "id": "rune-of-culmination",
+              "name": "Rune of Culmination"
+            },
+            {
+              "id": "rune-of-renown",
+              "name": "Rune of Renown"
+            },
+            {
+              "id": "rune-of-accumulation",
+              "name": "Rune of Accumulation"
+            },
+            {
+              "id": "rune-of-foundations",
+              "name": "Rune of Foundations"
+            },
+            {
+              "id": "rune-of-the-prism",
+              "name": "Rune of the Prism"
+            },
+            {
+              "id": "rune-of-the-blossom",
+              "name": "Rune of the Blossom"
+            },
+            {
+              "id": "rune-of-consistency",
+              "name": "Rune of Consistency"
+            },
+            {
+              "id": "rune-of-reach",
+              "name": "Rune of Reach"
+            },
+            {
+              "id": "rune-of-vital-flame",
+              "name": "Rune of Vital Flame"
+            },
+            {
+              "id": "rune-of-confrontation",
+              "name": "Rune of Confrontation"
+            },
+            {
+              "id": "warding-rune-of-reinforcement",
+              "name": "Warding Rune of Reinforcement"
+            },
+            {
+              "id": "warding-rune-of-protection",
+              "name": "Warding Rune of Protection"
+            },
+            {
+              "id": "warding-rune-of-disintegration",
+              "name": "Warding Rune of Disintegration"
+            },
+            {
+              "id": "warding-rune-of-desperation",
+              "name": "Warding Rune of Desperation"
+            },
+            {
+              "id": "warding-rune-of-symbiosis",
+              "name": "Warding Rune of Symbiosis"
+            },
+            {
+              "id": "warding-rune-of-courage",
+              "name": "Warding Rune of Courage"
+            },
+            {
+              "id": "warding-rune-of-stability",
+              "name": "Warding Rune of Stability"
+            },
+            {
+              "id": "warding-rune-of-glancing",
+              "name": "Warding Rune of Glancing"
+            },
+            {
+              "id": "warding-rune-of-heart",
+              "name": "Warding Rune of Heart"
+            },
+            {
+              "id": "warding-rune-of-nourishment",
+              "name": "Warding Rune of Nourishment"
+            },
+            {
+              "id": "warding-rune-of-annihilation",
+              "name": "Warding Rune of Annihilation"
+            },
+            {
+              "id": "warding-rune-of-armature",
+              "name": "Warding Rune of Armature"
+            },
+            {
+              "id": "warding-rune-of-obsession",
+              "name": "Warding Rune of Obsession"
+            },
+            {
+              "id": "warding-rune-of-equinox",
+              "name": "Warding Rune of Equinox"
+            },
+            {
+              "id": "warding-rune-of-salvaging",
+              "name": "Warding Rune of Salvaging"
+            },
+            {
+              "id": "warding-rune-of-bodyguards",
+              "name": "Warding Rune of Bodyguards"
+            },
+            {
+              "id": "warding-rune-of-hollowing",
+              "name": "Warding Rune of Hollowing"
+            },
+            {
+              "id": "serles-triumph",
+              "name": "Serle's Triumph"
+            },
+            {
+              "id": "cadigans-epiphany",
+              "name": "Cadigan's Epiphany"
+            },
+            {
+              "id": "astrids-creativity",
+              "name": "Astrid's Creativity"
+            },
+            {
+              "id": "emergent-vigour",
+              "name": "Emergent Vigour"
+            },
+            {
+              "id": "emergent-possibility",
+              "name": "Emergent Possibility"
+            },
+            {
+              "id": "emergent-protection",
+              "name": "Emergent Protection"
+            },
+            {
+              "id": "emergent-instinct",
+              "name": "Emergent Instinct"
+            },
+            {
+              "id": "uhtreds-sidereus",
+              "name": "Uhtred's Sidereus"
+            },
+            {
+              "id": "kolrs-hunt",
+              "name": "Kolr's Hunt"
+            },
+            {
+              "id": "voranas-carnage",
+              "name": "Vorana's Carnage"
+            },
+            {
+              "id": "thruds-might",
+              "name": "Thrud's Might"
+            },
+            {
+              "id": "medveds-tending",
+              "name": "Medved's Tending"
+            },
+            {
+              "id": "katlas-gloom",
+              "name": "Katla's Gloom"
+            },
+            {
+              "id": "aldurs-legacy",
+              "name": "Aldur's Legacy"
+            },
+            {
+              "id": "passion-of-aldur",
+              "name": "Passion of Aldur"
+            },
+            {
+              "id": "breath-of-aldur",
+              "name": "Breath of Aldur"
+            },
+            {
+              "id": "ire-of-aldur",
+              "name": "Ire of Aldur"
+            },
+            {
+              "id": "betrayal-of-aldur",
+              "name": "Betrayal of Aldur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ritual",
+      "groups": [
+        {
+          "name": "Omens",
+          "items": [
+            {
+              "id": null,
+              "name": "Omen of Sinistral Alchemy"
+            },
+            {
+              "id": null,
+              "name": "Omen of Dextral Alchemy"
+            },
+            {
+              "id": null,
+              "name": "Omen of Sinistral Coronation"
+            },
+            {
+              "id": null,
+              "name": "Omen of Dextral Coronation"
+            },
+            {
+              "id": null,
+              "name": "Omen of Homogenising Coronation"
+            },
+            {
+              "id": "omen-of-refreshment",
+              "name": "Omen of Refreshment"
+            },
+            {
+              "id": "omen-of-resurgence",
+              "name": "Omen of Resurgence"
+            },
+            {
+              "id": null,
+              "name": "Omen of Corruption"
+            },
+            {
+              "id": "omen-of-amelioration",
+              "name": "Omen of Amelioration"
+            },
+            {
+              "id": "omen-of-sinistral-exaltation",
+              "name": "Omen of Sinistral Exaltation"
+            },
+            {
+              "id": "omen-of-dextral-exaltation",
+              "name": "Omen of Dextral Exaltation"
+            },
+            {
+              "id": null,
+              "name": "Omen of Homogenising Exaltation"
+            },
+            {
+              "id": "omen-of-catalysing-exaltation",
+              "name": "Omen of Catalysing Exaltation"
+            },
+            {
+              "id": null,
+              "name": "Omen of Greater Annulment"
+            },
+            {
+              "id": "omen-of-whittling",
+              "name": "Omen of Whittling"
+            },
+            {
+              "id": "omen-of-sinistral-erasure",
+              "name": "Omen of Sinistral Erasure"
+            },
+            {
+              "id": "omen-of-dextral-erasure",
+              "name": "Omen of Dextral Erasure"
+            },
+            {
+              "id": "omen-of-chaotic-rarity",
+              "name": "Omen of Chaotic Rarity"
+            },
+            {
+              "id": "omen-of-chaotic-quantity",
+              "name": "Omen of Chaotic Quantity"
+            },
+            {
+              "id": "omen-of-chaotic-monsters",
+              "name": "Omen of Chaotic Monsters"
+            },
+            {
+              "id": "omen-of-chaotic-effectiveness",
+              "name": "Omen of Chaotic Effectiveness"
+            },
+            {
+              "id": "omen-of-sinistral-annulment",
+              "name": "Omen of Sinistral Annulment"
+            },
+            {
+              "id": "omen-of-dextral-annulment",
+              "name": "Omen of Dextral Annulment"
+            },
+            {
+              "id": "omen-of-chance",
+              "name": "Omen of Chance"
+            },
+            {
+              "id": "omen-of-the-ancients",
+              "name": "Omen of the Ancients"
+            },
+            {
+              "id": "omen-of-dextral-crystallisation",
+              "name": "Omen of Dextral Crystallisation"
+            },
+            {
+              "id": "omen-of-sinistral-crystallisation",
+              "name": "Omen of Sinistral Crystallisation"
+            },
+            {
+              "id": "omen-of-greater-exaltation",
+              "name": "Omen of Greater Exaltation"
+            },
+            {
+              "id": "omen-of-the-blessed",
+              "name": "Omen of the Blessed"
+            },
+            {
+              "id": "omen-of-sanctification",
+              "name": "Omen of Sanctification"
+            },
+            {
+              "id": "omen-of-gambling",
+              "name": "Omen of Gambling"
+            },
+            {
+              "id": "omen-of-bartering",
+              "name": "Omen of Bartering"
+            }
+          ]
+        },
+        {
+          "name": "Special Omens",
+          "items": [
+            {
+              "id": "omen-of-answered-prayers",
+              "name": "Omen of Answered Prayers"
+            },
+            {
+              "id": "omen-of-the-hunt",
+              "name": "Omen of the Hunt"
+            },
+            {
+              "id": "omen-of-reinforcements",
+              "name": "Omen of Reinforcements"
+            },
+            {
+              "id": "omen-of-secret-compartments",
+              "name": "Omen of Secret Compartments"
+            }
+          ]
+        },
+        {
+          "name": "Pinnacle Fragments",
+          "items": [
+            {
+              "id": "head-of-the-king",
+              "name": "Head of the King"
+            },
+            {
+              "id": "an-audience-with-the-king",
+              "name": "An Audience with the King"
+            }
+          ]
+        },
+        {
+          "name": "Ritual",
+          "items": [
+            {
+              "id": "sacred-bloom",
+              "name": "Sacred Bloom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Soul Cores",
+      "groups": [
+        {
+          "name": "Soul Cores",
+          "items": [
+            {
+              "id": "soul-core-of-topotante",
+              "name": "Soul Core of Topotante"
+            },
+            {
+              "id": "soul-core-of-tacati",
+              "name": "Soul Core of Tacati"
+            },
+            {
+              "id": "soul-core-of-opiloti",
+              "name": "Soul Core of Opiloti"
+            },
+            {
+              "id": "soul-core-of-jiquani",
+              "name": "Soul Core of Jiquani"
+            },
+            {
+              "id": "soul-core-of-zalatl",
+              "name": "Soul Core of Zalatl"
+            },
+            {
+              "id": "soul-core-of-citaqualotl",
+              "name": "Soul Core of Citaqualotl"
+            },
+            {
+              "id": "soul-core-of-puhuarte",
+              "name": "Soul Core of Puhuarte"
+            },
+            {
+              "id": "soul-core-of-tzamoto",
+              "name": "Soul Core of Tzamoto"
+            },
+            {
+              "id": "soul-core-of-xopec",
+              "name": "Soul Core of Xopec"
+            },
+            {
+              "id": "soul-core-of-quipolatl",
+              "name": "Soul Core of Quipolatl"
+            },
+            {
+              "id": "soul-core-of-ticaba",
+              "name": "Soul Core of Ticaba"
+            },
+            {
+              "id": "soul-core-of-atmohua",
+              "name": "Soul Core of Atmohua"
+            },
+            {
+              "id": "soul-core-of-cholotl",
+              "name": "Soul Core of Cholotl"
+            },
+            {
+              "id": "soul-core-of-zantipi",
+              "name": "Soul Core of Zantipi"
+            },
+            {
+              "id": "soul-core-of-azcapa",
+              "name": "Soul Core of Azcapa"
+            },
+            {
+              "id": "atmohuas-soul-core-of-retreat",
+              "name": "Atmohua's Soul Core of Retreat"
+            },
+            {
+              "id": "hayoxis-soul-core-of-heatproofing",
+              "name": "Hayoxi's Soul Core of Heatproofing"
+            },
+            {
+              "id": "zalatls-soul-core-of-insulation",
+              "name": "Zalatl's Soul Core of Insulation"
+            },
+            {
+              "id": "topotantes-soul-core-of-dampening",
+              "name": "Topotante's Soul Core of Dampening"
+            },
+            {
+              "id": "opilotis-soul-core-of-assault",
+              "name": "Opiloti's Soul Core of Assault"
+            },
+            {
+              "id": "guatelitzis-soul-core-of-endurance",
+              "name": "Guatelitzi's Soul Core of Endurance"
+            },
+            {
+              "id": "xopecs-soul-core-of-power",
+              "name": "Xopec's Soul Core of Power"
+            },
+            {
+              "id": "xipocados-soul-core-of-dominion",
+              "name": "Xipocado's Soul Core of Dominion"
+            },
+            {
+              "id": "citaqualotls-soul-core-of-foulness",
+              "name": "Citaqualotl's Soul Core of Foulness"
+            },
+            {
+              "id": "cholotls-soul-core-of-war",
+              "name": "Cholotl's Soul Core of War"
+            },
+            {
+              "id": "tacatis-soul-core-of-affliction",
+              "name": "Tacati's Soul Core of Affliction"
+            },
+            {
+              "id": "quipolatls-soul-core-of-flow",
+              "name": "Quipolatl's Soul Core of Flow"
+            },
+            {
+              "id": "tzamotos-soul-core-of-ferocity",
+              "name": "Tzamoto's Soul Core of Ferocity"
+            },
+            {
+              "id": "uromotis-soul-core-of-attenuation",
+              "name": "Uromoti's Soul Core of Attenuation"
+            },
+            {
+              "id": "estazuntis-soul-core-of-convalescence",
+              "name": "Estazunti's Soul Core of Convalescence"
+            },
+            {
+              "id": "jiquanis-soul-core-of-automation",
+              "name": "Jiquani's Soul Core of Automation"
+            },
+            {
+              "id": "jiquanis-soul-core-of-malediction",
+              "name": "Jiquani's Soul Core of Malediction"
+            },
+            {
+              "id": "jiquanis-soul-core-of-targeting",
+              "name": "Jiquani's Soul Core of Targeting"
+            },
+            {
+              "id": "jiquanis-soul-core-of-rallying",
+              "name": "Jiquani's Soul Core of Rallying"
+            },
+            {
+              "id": "jiquanis-soul-core-of-radiance",
+              "name": "Jiquani's Soul Core of Radiance"
+            },
+            {
+              "id": "jiquanis-soul-core-of-severing",
+              "name": "Jiquani's Soul Core of Severing"
+            },
+            {
+              "id": "jiquanis-soul-core-of-rippling",
+              "name": "Jiquani's Soul Core of Rippling"
+            },
+            {
+              "id": "jiquanis-soul-core-of-quaking",
+              "name": "Jiquani's Soul Core of Quaking"
+            },
+            {
+              "id": "jiquanis-soul-core-of-munitions",
+              "name": "Jiquani's Soul Core of Munitions"
+            },
+            {
+              "id": "jiquanis-soul-core-of-snares",
+              "name": "Jiquani's Soul Core of Snares"
+            },
+            {
+              "id": "jiquanis-soul-core-of-abundance",
+              "name": "Jiquani's Soul Core of Abundance"
+            },
+            {
+              "id": "jiquanis-soul-core-of-squalls",
+              "name": "Jiquani's Soul Core of Squalls"
+            },
+            {
+              "id": "jiquanis-soul-core-of-thundering",
+              "name": "Jiquani's Soul Core of Thundering"
+            },
+            {
+              "id": "atziris-soul-core-of-devotion",
+              "name": "Atziri's Soul Core of Devotion"
+            },
+            {
+              "id": "atziris-soul-core-of-vitality",
+              "name": "Atziri's Soul Core of Vitality"
+            },
+            {
+              "id": "atziris-soul-core-of-alacrity",
+              "name": "Atziri's Soul Core of Alacrity"
+            },
+            {
+              "id": "atziris-soul-core-of-inoculation",
+              "name": "Atziri's Soul Core of Inoculation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Idols",
+      "groups": [
+        {
+          "name": "Idols",
+          "items": [
+            {
+              "id": "bear-idol",
+              "name": "Bear Idol"
+            },
+            {
+              "id": "primate-idol",
+              "name": "Primate Idol"
+            },
+            {
+              "id": "stag-idol",
+              "name": "Stag Idol"
+            },
+            {
+              "id": "boar-idol",
+              "name": "Boar Idol"
+            },
+            {
+              "id": "snake-idol",
+              "name": "Snake Idol"
+            },
+            {
+              "id": "wolf-idol",
+              "name": "Wolf Idol"
+            },
+            {
+              "id": "cat-idol",
+              "name": "Cat Idol"
+            },
+            {
+              "id": "owl-idol",
+              "name": "Owl Idol"
+            },
+            {
+              "id": "ox-idol",
+              "name": "Ox Idol"
+            },
+            {
+              "id": "fox-idol",
+              "name": "Fox Idol"
+            },
+            {
+              "id": "rabbit-idol",
+              "name": "Rabbit Idol"
+            },
+            {
+              "id": "idol-of-thruldana",
+              "name": "Idol of Thruldana"
+            },
+            {
+              "id": "idol-of-maxarius",
+              "name": "Idol of Maxarius"
+            },
+            {
+              "id": "idol-of-eeshta",
+              "name": "Idol of Eeshta"
+            },
+            {
+              "id": "idol-of-egrin",
+              "name": "Idol of Egrin"
+            },
+            {
+              "id": "idol-of-ralakesh",
+              "name": "Idol of Ralakesh"
+            },
+            {
+              "id": "idol-of-sirrius",
+              "name": "Idol of Sirrius"
+            },
+            {
+              "id": "idol-of-grold",
+              "name": "Idol of Grold"
+            },
+            {
+              "id": "idol-of-greust",
+              "name": "Idol of Greust"
+            },
+            {
+              "id": "idol-of-yeena",
+              "name": "Idol of Yeena"
+            },
+            {
+              "id": "idol-of-eramir",
+              "name": "Idol of Eramir"
+            },
+            {
+              "id": "idol-of-oak",
+              "name": "Idol of Oak"
+            },
+            {
+              "id": "idol-of-alira",
+              "name": "Idol of Alira"
+            },
+            {
+              "id": "idol-of-kraityn",
+              "name": "Idol of Kraityn"
+            },
+            {
+              "id": "idol-of-silk",
+              "name": "Idol of Silk"
+            },
+            {
+              "id": "panther-idol",
+              "name": "Panther Idol"
+            },
+            {
+              "id": "hawk-idol",
+              "name": "Hawk Idol"
+            },
+            {
+              "id": "stoat-idol",
+              "name": "Stoat Idol"
+            }
+          ]
+        },
+        {
+          "name": "Ritual",
+          "items": [
+            {
+              "id": "idol-of-the-sycophant",
+              "name": "Idol of the Sycophant"
+            },
+            {
+              "id": "idol-of-the-martyr",
+              "name": "Idol of the Martyr"
+            },
+            {
+              "id": "idol-of-the-pharisee",
+              "name": "Idol of the Pharisee"
+            },
+            {
+              "id": "carved-cunning",
+              "name": "Carved Cunning"
+            },
+            {
+              "id": "carved-majesty",
+              "name": "Carved Majesty"
+            },
+            {
+              "id": "carved-mischief",
+              "name": "Carved Mischief"
+            },
+            {
+              "id": "carved-tenacity",
+              "name": "Carved Tenacity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Uncut Gems",
+      "groups": [
+        {
+          "name": "Uncut Support Gems",
+          "items": [
+            {
+              "id": "uncut-support-gem-1",
+              "name": "Uncut Support Gem (Level 1)"
+            },
+            {
+              "id": "uncut-support-gem-2",
+              "name": "Uncut Support Gem (Level 2)"
+            },
+            {
+              "id": "uncut-support-gem-3",
+              "name": "Uncut Support Gem (Level 3)"
+            },
+            {
+              "id": "uncut-support-gem-4",
+              "name": "Uncut Support Gem (Level 4)"
+            },
+            {
+              "id": "uncut-support-gem-5",
+              "name": "Uncut Support Gem (Level 5)"
+            }
+          ]
+        },
+        {
+          "name": "Uncut Reservation Gems",
+          "items": [
+            {
+              "id": "uncut-spirit-gem-4",
+              "name": "Uncut Spirit Gem (Level 4)"
+            },
+            {
+              "id": "uncut-spirit-gem-5",
+              "name": "Uncut Spirit Gem (Level 5)"
+            },
+            {
+              "id": "uncut-spirit-gem-6",
+              "name": "Uncut Spirit Gem (Level 6)"
+            },
+            {
+              "id": "uncut-spirit-gem-7",
+              "name": "Uncut Spirit Gem (Level 7)"
+            },
+            {
+              "id": "uncut-spirit-gem-8",
+              "name": "Uncut Spirit Gem (Level 8)"
+            },
+            {
+              "id": "uncut-spirit-gem-9",
+              "name": "Uncut Spirit Gem (Level 9)"
+            },
+            {
+              "id": "uncut-spirit-gem-10",
+              "name": "Uncut Spirit Gem (Level 10)"
+            },
+            {
+              "id": "uncut-spirit-gem-11",
+              "name": "Uncut Spirit Gem (Level 11)"
+            },
+            {
+              "id": "uncut-spirit-gem-12",
+              "name": "Uncut Spirit Gem (Level 12)"
+            },
+            {
+              "id": "uncut-spirit-gem-13",
+              "name": "Uncut Spirit Gem (Level 13)"
+            },
+            {
+              "id": "uncut-spirit-gem-14",
+              "name": "Uncut Spirit Gem (Level 14)"
+            },
+            {
+              "id": "uncut-spirit-gem-15",
+              "name": "Uncut Spirit Gem (Level 15)"
+            },
+            {
+              "id": "uncut-spirit-gem-16",
+              "name": "Uncut Spirit Gem (Level 16)"
+            },
+            {
+              "id": "uncut-spirit-gem-17",
+              "name": "Uncut Spirit Gem (Level 17)"
+            },
+            {
+              "id": "uncut-spirit-gem-18",
+              "name": "Uncut Spirit Gem (Level 18)"
+            },
+            {
+              "id": "uncut-spirit-gem-19",
+              "name": "Uncut Spirit Gem (Level 19)"
+            },
+            {
+              "id": "uncut-spirit-gem-20",
+              "name": "Uncut Spirit Gem (Level 20)"
+            }
+          ]
+        },
+        {
+          "name": "Uncut Skill Gems",
+          "items": [
+            {
+              "id": "uncut-skill-gem-1",
+              "name": "Uncut Skill Gem (Level 1)"
+            },
+            {
+              "id": "uncut-skill-gem-2",
+              "name": "Uncut Skill Gem (Level 2)"
+            },
+            {
+              "id": "uncut-skill-gem-3",
+              "name": "Uncut Skill Gem (Level 3)"
+            },
+            {
+              "id": "uncut-skill-gem-4",
+              "name": "Uncut Skill Gem (Level 4)"
+            },
+            {
+              "id": "uncut-skill-gem-5",
+              "name": "Uncut Skill Gem (Level 5)"
+            },
+            {
+              "id": "uncut-skill-gem-6",
+              "name": "Uncut Skill Gem (Level 6)"
+            },
+            {
+              "id": "uncut-skill-gem-7",
+              "name": "Uncut Skill Gem (Level 7)"
+            },
+            {
+              "id": "uncut-skill-gem-8",
+              "name": "Uncut Skill Gem (Level 8)"
+            },
+            {
+              "id": "uncut-skill-gem-9",
+              "name": "Uncut Skill Gem (Level 9)"
+            },
+            {
+              "id": "uncut-skill-gem-10",
+              "name": "Uncut Skill Gem (Level 10)"
+            },
+            {
+              "id": "uncut-skill-gem-11",
+              "name": "Uncut Skill Gem (Level 11)"
+            },
+            {
+              "id": "uncut-skill-gem-12",
+              "name": "Uncut Skill Gem (Level 12)"
+            },
+            {
+              "id": "uncut-skill-gem-13",
+              "name": "Uncut Skill Gem (Level 13)"
+            },
+            {
+              "id": "uncut-skill-gem-14",
+              "name": "Uncut Skill Gem (Level 14)"
+            },
+            {
+              "id": "uncut-skill-gem-15",
+              "name": "Uncut Skill Gem (Level 15)"
+            },
+            {
+              "id": "uncut-skill-gem-16",
+              "name": "Uncut Skill Gem (Level 16)"
+            },
+            {
+              "id": "uncut-skill-gem-17",
+              "name": "Uncut Skill Gem (Level 17)"
+            },
+            {
+              "id": "uncut-skill-gem-18",
+              "name": "Uncut Skill Gem (Level 18)"
+            },
+            {
+              "id": "uncut-skill-gem-19",
+              "name": "Uncut Skill Gem (Level 19)"
+            },
+            {
+              "id": "uncut-skill-gem-20",
+              "name": "Uncut Skill Gem (Level 20)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Expedition",
+      "groups": [
+        {
+          "name": "Fluxes",
+          "items": [
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 5)"
+            },
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 6)"
+            },
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 7)"
+            },
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 8)"
+            },
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 9)"
+            },
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 10)"
+            },
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 11)"
+            },
+            {
+              "id": null,
+              "name": "Thaumaturgic Flux (Level 12)"
+            },
+            {
+              "id": "thaumaturgic-flux-13",
+              "name": "Thaumaturgic Flux (Level 13)"
+            },
+            {
+              "id": "thaumaturgic-flux-14",
+              "name": "Thaumaturgic Flux (Level 14)"
+            },
+            {
+              "id": "thaumaturgic-flux-15",
+              "name": "Thaumaturgic Flux (Level 15)"
+            },
+            {
+              "id": "thaumaturgic-flux-16",
+              "name": "Thaumaturgic Flux (Level 16)"
+            },
+            {
+              "id": "thaumaturgic-flux-17",
+              "name": "Thaumaturgic Flux (Level 17)"
+            },
+            {
+              "id": "thaumaturgic-flux-18",
+              "name": "Thaumaturgic Flux (Level 18)"
+            },
+            {
+              "id": "thaumaturgic-flux-19",
+              "name": "Thaumaturgic Flux (Level 19)"
+            },
+            {
+              "id": "thaumaturgic-flux-20",
+              "name": "Thaumaturgic Flux (Level 20)"
+            },
+            {
+              "id": "blazing-flux",
+              "name": "Blazing Flux"
+            },
+            {
+              "id": "chilling-flux",
+              "name": "Chilling Flux"
+            },
+            {
+              "id": "crackling-flux",
+              "name": "Crackling Flux"
+            },
+            {
+              "id": "void-flux",
+              "name": "Void Flux"
+            },
+            {
+              "id": "perfect-flux",
+              "name": "Perfect Flux"
+            }
+          ]
+        },
+        {
+          "name": "Expedition",
+          "items": [
+            {
+              "id": "expedition-logbook",
+              "name": "Expedition Logbook"
+            },
+            {
+              "id": "shattered-triskelion",
+              "name": "Shattered Triskelion"
+            },
+            {
+              "id": "the-triskelion-reforged",
+              "name": "The Triskelion Reforged"
+            }
+          ]
+        },
+        {
+          "name": "Omens",
+          "items": [
+            {
+              "id": null,
+              "name": "Aldur's Saga"
+            },
+            {
+              "id": "medveds-saga",
+              "name": "Medved's Saga"
+            },
+            {
+              "id": "voranas-saga",
+              "name": "Vorana's Saga"
+            },
+            {
+              "id": "uhtreds-saga",
+              "name": "Uhtred's Saga"
+            },
+            {
+              "id": "olroths-saga",
+              "name": "Olroth's Saga"
+            }
+          ]
+        },
+        {
+          "name": "Verisium",
+          "items": [
+            {
+              "id": "verisium",
+              "name": "Verisium"
+            },
+            {
+              "id": "exceptional-verisium",
+              "name": "Exceptional Verisium"
+            },
+            {
+              "id": "medveds-crest-of-the-circle",
+              "name": "Medved's Crest of the Circle"
+            },
+            {
+              "id": "voranas-crest-of-the-scythe",
+              "name": "Vorana's Crest of the Scythe"
+            },
+            {
+              "id": "uhtreds-crest-of-the-chalice",
+              "name": "Uhtred's Crest of the Chalice"
+            },
+            {
+              "id": "olroths-crest-of-the-sun",
+              "name": "Olroth's Crest of the Sun"
+            },
+            {
+              "id": "liquid-verisium",
+              "name": "Liquid Verisium"
+            }
+          ]
+        },
+        {
+          "name": "Alloys",
+          "items": [
+            {
+              "id": "runic-alloy",
+              "name": "Runic Alloy"
+            },
+            {
+              "id": "adaptive-alloy",
+              "name": "Adaptive Alloy"
+            },
+            {
+              "id": "protective-alloy",
+              "name": "Protective Alloy"
+            },
+            {
+              "id": "expansive-alloy",
+              "name": "Expansive Alloy"
+            },
+            {
+              "id": "swift-alloy",
+              "name": "Swift Alloy"
+            },
+            {
+              "id": "cyclonic-alloy",
+              "name": "Cyclonic Alloy"
+            },
+            {
+              "id": "prismatic-alloy",
+              "name": "Prismatic Alloy"
+            },
+            {
+              "id": "mystic-alloy",
+              "name": "Mystic Alloy"
+            },
+            {
+              "id": "sovereign-alloy",
+              "name": "Sovereign Alloy"
+            },
+            {
+              "id": "celestial-alloy",
+              "name": "Celestial Alloy"
+            },
+            {
+              "id": "transcendent-alloy",
+              "name": "Transcendent Alloy"
+            },
+            {
+              "id": "the-runebinders-alloy",
+              "name": "The Runebinder's Alloy"
+            },
+            {
+              "id": "the-runefathers-alloy",
+              "name": "The Runefather's Alloy"
+            }
+          ]
+        },
+        {
+          "name": "Starlit Ore",
+          "items": [
+            {
+              "id": null,
+              "name": "Starlit Ore"
+            },
+            {
+              "id": null,
+              "name": "Venerable Starlit Ore"
+            },
+            {
+              "id": "revered-starlit-ore",
+              "name": "Revered Starlit Ore"
+            },
+            {
+              "id": "veridical-starlit-ore",
+              "name": "Veridical Starlit Ore"
+            },
+            {
+              "id": "warding-starlit-ore",
+              "name": "Warding Starlit Ore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gems",
+      "groups": [
+        {
+          "name": "Lineage Support Gems",
+          "items": [
+            {
+              "id": "ataluis-bloodletting",
+              "name": "Atalui's Bloodletting"
+            },
+            {
+              "id": "einhars-beastrite",
+              "name": "Einhar's Beastrite"
+            },
+            {
+              "id": "brutus-brain",
+              "name": "Brutus' Brain"
+            },
+            {
+              "id": "uruks-smelting",
+              "name": "Uruk's Smelting"
+            },
+            {
+              "id": "paquates-pact",
+              "name": "Paquate's Pact"
+            },
+            {
+              "id": "vilentas-propulsion",
+              "name": "Vilenta's Propulsion"
+            },
+            {
+              "id": "ailiths-chimes",
+              "name": "Ailith's Chimes"
+            },
+            {
+              "id": "tecrods-revenge",
+              "name": "Tecrod's Revenge"
+            },
+            {
+              "id": "doedres-undoing",
+              "name": "Doedre's Undoing"
+            },
+            {
+              "id": "rathas-assault",
+              "name": "Ratha's Assault"
+            },
+            {
+              "id": "arjuns-medal",
+              "name": "Arjun's Medal"
+            },
+            {
+              "id": "kaoms-madness",
+              "name": "Kaom's Madness"
+            },
+            {
+              "id": "siones-temper",
+              "name": "Sione's Temper"
+            },
+            {
+              "id": "ixchels-torment",
+              "name": "Ixchel's Torment"
+            },
+            {
+              "id": "romiras-requital",
+              "name": "Romira's Requital"
+            },
+            {
+              "id": "tawhoas-tending",
+              "name": "Tawhoa's Tending"
+            },
+            {
+              "id": "dominus-grasp",
+              "name": "Dominus' Grasp"
+            },
+            {
+              "id": "diallas-desire",
+              "name": "Dialla's Desire"
+            },
+            {
+              "id": "kalisas-crescendo",
+              "name": "Kalisa's Crescendo"
+            },
+            {
+              "id": "kulemaks-dominion",
+              "name": "Kulemak's Dominion"
+            },
+            {
+              "id": "amanamus-tithe",
+              "name": "Amanamu's Tithe"
+            },
+            {
+              "id": "xophs-pyre",
+              "name": "Xoph's Pyre"
+            },
+            {
+              "id": "eshs-radiance",
+              "name": "Esh's Radiance"
+            },
+            {
+              "id": "tuls-stillness",
+              "name": "Tul's Stillness"
+            },
+            {
+              "id": "uul-netols-embrace",
+              "name": "Uul-Netol's Embrace"
+            },
+            {
+              "id": "rakiatas-flow",
+              "name": "Rakiata's Flow"
+            },
+            {
+              "id": "garukhans-resolve",
+              "name": "Garukhan's Resolve"
+            },
+            {
+              "id": "tasalios-rhythm",
+              "name": "Tasalio's Rhythm"
+            },
+            {
+              "id": "tacatis-ire",
+              "name": "Tacati's Ire"
+            },
+            {
+              "id": "rigwalds-ferocity",
+              "name": "Rigwald's Ferocity"
+            },
+            {
+              "id": "khatals-rejuvenation",
+              "name": "Khatal's Rejuvenation"
+            },
+            {
+              "id": "bhatairs-vengeance",
+              "name": "Bhatair's Vengeance"
+            },
+            {
+              "id": "uhtreds-exodus",
+              "name": "Uhtred's Exodus"
+            },
+            {
+              "id": "uhtreds-omen",
+              "name": "Uhtred's Omen"
+            },
+            {
+              "id": "uhtreds-augury",
+              "name": "Uhtred's Augury"
+            },
+            {
+              "id": "daressos-passion",
+              "name": "Daresso's Passion"
+            },
+            {
+              "id": "ahns-citadel",
+              "name": "Ahn's Citadel"
+            },
+            {
+              "id": "atziris-allure",
+              "name": "Atziri's Allure"
+            },
+            {
+              "id": "hayoxis-fulmination",
+              "name": "Hayoxi's Fulmination"
+            },
+            {
+              "id": "zarokhs-refrain",
+              "name": "Zarokh's Refrain"
+            },
+            {
+              "id": "kurgals-leash",
+              "name": "Kurgal's Leash"
+            },
+            {
+              "id": "varashtas-blessing",
+              "name": "Varashta's Blessing"
+            },
+            {
+              "id": "arbiters-ignition",
+              "name": "Arbiter's Ignition"
+            },
+            {
+              "id": "arakaalis-lust",
+              "name": "Arakaali's Lust"
+            },
+            {
+              "id": "xibaquas-rending",
+              "name": "Xibaqua's Rending"
+            },
+            {
+              "id": "guatelitzis-ablation",
+              "name": "Guatelitzi's Ablation"
+            },
+            {
+              "id": "atziris-communion",
+              "name": "Atziri's Communion"
+            },
+            {
+              "id": "atziris-impatience",
+              "name": "Atziri's Impatience"
+            },
+            {
+              "id": "zerphis-infamy",
+              "name": "Zerphi's Infamy"
+            },
+            {
+              "id": "zarokhs-revolt",
+              "name": "Zarokh's Revolt"
+            },
+            {
+              "id": "oisins-oath",
+              "name": "Oisín's Oath"
+            },
+            {
+              "id": null,
+              "name": "Cirel's Cultivation"
+            },
+            {
+              "id": "morganas-tempest",
+              "name": "Morgana's Tempest"
+            },
+            {
+              "id": "eonyrs-thunder",
+              "name": "Eonyr's Thunder"
+            },
+            {
+              "id": "helbryms-hide",
+              "name": "Helbrym's Hide"
+            },
+            {
+              "id": "her-declaration",
+              "name": "Her Declaration"
+            },
+            {
+              "id": "prototype-seventeen",
+              "name": "Prototype Seventeen"
+            },
+            {
+              "id": "seraphs-heart",
+              "name": "Seraph's Heart"
+            },
+            {
+              "id": "uhtreds-rite",
+              "name": "Uhtred's Rite"
+            },
+            {
+              "id": "tricksters-shard",
+              "name": "Trickster's Shard"
+            },
+            {
+              "id": "arbiters-reach",
+              "name": "Arbiter's Reach"
+            },
+            {
+              "id": "tangmazus-thurible",
+              "name": "Tangmazu's Thurible"
+            },
+            {
+              "id": "eshs-prowess",
+              "name": "Esh's Prowess"
+            },
+            {
+              "id": "breachlords-rift",
+              "name": "Breachlord's Rift"
+            },
+            {
+              "id": "breachlords-amalgam",
+              "name": "Breachlord's Amalgam"
+            },
+            {
+              "id": "vruuns-aftermath",
+              "name": "Vruun's Aftermath"
+            },
+            {
+              "id": "vruuns-inevitability",
+              "name": "Vruun's Inevitability"
+            },
+            {
+              "id": "uhtreds-constellation",
+              "name": "Uhtred's Constellation"
+            },
+            {
+              "id": "medveds-felling",
+              "name": "Medved's Felling"
+            },
+            {
+              "id": "voranas-siege",
+              "name": "Vorana's Siege"
+            },
+            {
+              "id": "styrns-mountain",
+              "name": "Styrn's Mountain"
+            },
+            {
+              "id": "styrns-ferocity",
+              "name": "Styrn's Ferocity"
+            },
+            {
+              "id": "cathas-brilliance",
+              "name": "Catha's Brilliance"
+            },
+            {
+              "id": "mórrigans-insight",
+              "name": "Mórrigan's Insight"
+            },
+            {
+              "id": "tuls-avalanche",
+              "name": "Tul's Avalanche"
+            },
+            {
+              "id": "olroths-hubris",
+              "name": "Olroth's Hubris"
+            },
+            {
+              "id": "olroths-conviction",
+              "name": "Olroth's Conviction"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unlistedItems": []
+}

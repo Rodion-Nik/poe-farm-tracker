@@ -5,9 +5,11 @@ rem Save this BAT anywhere in your React project.
 rem JSON files are saved next to it in the ApiDataBase folder.
 set "LEAGUE=Forbidden Rites"
 set "API_URL=https://poe.ninja/poe2/api/economy/exchange/current/overview"
+rem Tablets are not on the exchange, they come from the stash overview.
+set "STASH_URL=https://poe.ninja/poe2/api/economy/stash/current/item/overview"
 set "OUTPUT_DIR=%~dp0ApiDataBase"
 set "DOWNLOAD_ID=%RANDOM%-%RANDOM%"
-set /a SUCCESS=0, FAILED=0
+set /a SUCCESS=0, FAILED=0, TOTAL=0
 set "EXIT_CODE=0"
 
 curl.exe --version >nul 2>&1
@@ -28,17 +30,20 @@ echo League: %LEAGUE%
 echo Output: "%OUTPUT_DIR%"
 echo.
 
-for %%T in (Currency Fragments Abyss UncutGems LineageSupportGems Essences SoulCores Idols Runes Ritual Expedition Delirium Breach Verisium) do call :download "%%T"
+for %%T in (Currency Fragments Abyss UncutGems LineageSupportGems Essences SoulCores Idols Runes Ritual Expedition Delirium Breach Verisium) do call :download "%%T" "%API_URL%"
+for %%T in (PrecursorTablets UniqueTablets) do call :download "%%T" "%STASH_URL%"
 
 echo.
-echo Finished. Updated: %SUCCESS% / 14. Failed: %FAILED%.
+echo Finished. Updated: %SUCCESS% / %TOTAL%. Failed: %FAILED%.
 if not "%FAILED%"=="0" set "EXIT_CODE=1"
 goto :finish
 
 :download
 set "TYPE=%~1"
+set "URL=%~2"
 set "TARGET_FILE=%OUTPUT_DIR%\%~1.json"
 set "TEMP_FILE=%OUTPUT_DIR%\%~1.json.%DOWNLOAD_ID%.tmp"
+set /a TOTAL+=1 >nul
 echo Downloading %TYPE%...
 
 rem --data-urlencode correctly encodes spaces and other query characters.
@@ -48,7 +53,7 @@ curl.exe --fail --location --silent --show-error ^
     --get --data-urlencode "league=%LEAGUE%" ^
     --data-urlencode "type=%TYPE%" ^
     --header "Accept: application/json" ^
-    --output "%TEMP_FILE%" "%API_URL%"
+    --output "%TEMP_FILE%" "%URL%"
 if errorlevel 1 goto :download_failed
 
 if not exist "%TEMP_FILE%" goto :download_failed
