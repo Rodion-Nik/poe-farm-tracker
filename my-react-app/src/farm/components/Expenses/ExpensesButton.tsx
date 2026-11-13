@@ -1,16 +1,18 @@
-import type { expensesItem } from "../utils/items";
+import type { useExpensesItem } from "../utils/items";
 
 type ExpensesButtonProps = {
-    item: (typeof expensesItem)[0];
+  item: ReturnType<typeof useExpensesItem>[number];
   selectedExpenses: string[];
 
 };
 
 export function ExpensesButton({
+  
   item,
   selectedExpenses,
 
 }: ExpensesButtonProps) {
+  
   return (
     <button
       className={

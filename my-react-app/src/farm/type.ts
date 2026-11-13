@@ -9,6 +9,8 @@ export type FarmRun = {
   saved: boolean;
   time: string;
   drop: Drop[];
+  PreSet?: PricedItem[] | WaystoneExpenses;
+  runSelectedPreSet: "A"|"B"|"C";
 };
 
 export type Farm = {
@@ -42,4 +44,12 @@ export type ExpensesPreSet ={
 }
 
 
-
+export type Item ={
+  category: string;
+  currency: string;
+  fetched_at: string;
+  id: string;
+  image: string|null;
+  name: string;
+  price: number;
+}

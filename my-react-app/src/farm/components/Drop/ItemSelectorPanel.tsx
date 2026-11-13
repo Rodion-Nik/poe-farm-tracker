@@ -1,18 +1,9 @@
 import { useState } from "react";
 import exchangeOrder from "../../../ApiDataBase/currency-exchange-order.json";
-import { allItems } from "../../../ApiDataBase";
-import { Drop } from "../../type";
-const correctDisplayOrder = {
-    Pos: exchangeOrder.categories.map((categories) => ({
-        name: categories.name,
-        groups: categories.groups.map((group) => ({
-            name: group.name,
-            items: group.items.map((orderItem) =>
-                allItems.find((priceItem) => priceItem.id === orderItem.id),
-            ),
-        })),
-    })),
-};
+
+import { Drop, Item } from "../../type";
+
+
 
 
 
@@ -24,6 +15,7 @@ type ItemSelectorPanelProps = {
     setCurrentDrop: React.Dispatch<React.SetStateAction<Drop[]>>;
     currentDrop: Drop[];
     onClose: () => void;
+    items:Item[]
 };
 
 export function ItemSelectorPanel({
@@ -32,7 +24,24 @@ export function ItemSelectorPanel({
     currentDrop,
     setCurrentDrop,
     onClose,
+    items
 }: ItemSelectorPanelProps) {
+
+
+    const correctDisplayOrder = {
+        Pos: exchangeOrder.categories.map((categories) => ({
+            name: categories.name,
+            groups: categories.groups.map((group) => ({
+                name: group.name,
+                items: group.items.map((orderItem) =>
+                    items.find((priceItem) => priceItem.id === orderItem.id),
+                ),
+            })),
+        })),
+    };
+
+
+
     const [activeCategory, setActiveCategory] = useState("All");
     const [inputTextHolder, setInputTextHolder] = useState("");
 

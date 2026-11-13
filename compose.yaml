@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: poe
+    volumes:
+      - poe-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d poe"]
+      interval: 5s
+      retries: 10
+    restart: unless-stopped
+  api:
+    build: ./server
+    environment:
+      DATABASE_URL: postgres://postgres:${DB_PASSWORD}@db:5432/poe
+      DEFAULT_LEAGUE: ${LEAGUE}
+      PORT: 3000
+    depends_on:
+      db: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/health || exit 1"]
+      interval: 10s
+      retries: 5
+    restart: unless-stopped
+  collector:
+    build: ./collector
+    environment:
+      DATABASE_URL: postgres://postgres:${DB_PASSWORD}@db:5432/poe
+      LEAGUE: ${LEAGUE}
+      INTERVAL_MIN: 60
+      USER_AGENT: ${USER_AGENT}
+    depends_on:
+      db: { condition: service_healthy }
+    restart: unless-stopped
+  web:
+    build: ./my-react-app
+    ports:
+      - "8080:80"
+    depends_on:
+      api: { condition: service_healthy }
+    restart: unless-stopped
+volumes:
+  poe-data:

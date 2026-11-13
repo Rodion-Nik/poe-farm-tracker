@@ -1,9 +1,9 @@
 
-import { allItems,getItemPrice } from "../../../ApiDataBase";
-import type { ExpensesPreSet } from "../../type";
-import { expensesItem, chaosImg } from "../utils/items";
-import { Droppable } from "./Dnd";
 
+import type { ExpensesPreSet } from "../../type";
+import { useExpensesItem, chaosImg } from "../utils/items";
+import { Droppable } from "./Dnd";
+import { usePriceItems } from "../../PricesContext";
 
 type ExpensesDropSectionProps = {
   selectedExpenses: string[];
@@ -20,6 +20,8 @@ export function ExpensesDropSection({
   expensesPreSet,
   setExpensesPreSet,
 }: ExpensesDropSectionProps) {
+  const pricedItems = usePriceItems()
+  const expensesItem = useExpensesItem() 
   const PreSet = expensesPreSet[expensesSelector];
 
   if (Array.isArray(PreSet)) {
@@ -65,12 +67,12 @@ export function ExpensesDropSection({
             <div className="expenses-price-list">
               {PreSet.map(
                 (exp) =>
-                  allItems.find((item) => exp.itemId === item.id) && (
+                  expensesItem.find((item) => exp.itemId === item.id) && (
                     <div className="expenses-price-row" key={exp.itemId}>
                       <span className="expenses-price-pn">
                         <span className="expenses-price-label">PN price</span>
                         <span className="expenses-price-amount">
-                          {(getItemPrice(exp.itemId) / getItemPrice("chaos")).toFixed(
+                          {((pricedItems.find(priceItems => priceItems.id === exp.itemId)?.price ?? 0) / (pricedItems.find(priceItems => priceItems.id === 'chaos')?.price ?? 0)).toFixed(
                             2,
                           )}
                           <img
@@ -184,7 +186,7 @@ export function ExpensesDropSection({
                         <span className="expenses-price-pn">
                           <span className="expenses-price-label">PN price</span>
                           <span className="expenses-price-amount">
-                            {(getItemPrice(exp.itemId) / getItemPrice("chaos")).toFixed(2)}
+                            {((pricedItems.find(priceItems => priceItems.id === exp.itemId)?.price ?? 0) / (pricedItems.find(priceItems => priceItems.id === 'chaos')?.price ?? 0)).toFixed(2)}
                             <img className="item-icon" src={chaosImg} alt="Chaos Orb" />
                           </span>
                         </span>
@@ -260,7 +262,7 @@ export function ExpensesDropSection({
                     <span className="expenses-price-pn">
                       <span className="expenses-price-label">PN price</span>
                       <span className="expenses-price-amount">
-                        {(getItemPrice(exp.itemId) / getItemPrice("chaos")).toFixed(2)}
+                        {((pricedItems.find(priceItems => priceItems.id === exp.itemId)?.price ?? 0) / (pricedItems.find(priceItems => priceItems.id === 'chaos')?.price ?? 0)).toFixed(2)}
                         <img className="item-icon" src={chaosImg} alt="Chaos Orb" />
                       </span>
                     </span>
@@ -335,7 +337,7 @@ export function ExpensesDropSection({
                     <span className="expenses-price-pn">
                       <span className="expenses-price-label">PN price</span>
                       <span className="expenses-price-amount">
-                        {(getItemPrice(exp.itemId) / getItemPrice("chaos")).toFixed(2)}
+                        {((pricedItems.find(priceItems => priceItems.id === exp.itemId)?.price ?? 0) / (pricedItems.find(priceItems => priceItems.id === 'chaos')?.price ?? 0)).toFixed(2)}
                         <img className="item-icon" src={chaosImg} alt="Chaos Orb" />
                       </span>
                     </span>

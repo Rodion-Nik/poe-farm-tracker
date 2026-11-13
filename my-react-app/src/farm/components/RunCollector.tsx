@@ -1,6 +1,8 @@
 //  ниже панель с забегами (та что под инфой)
-import { Drop,Farm, FarmRun } from "../type";
-import { allItems } from "../../ApiDataBase";
+import { Drop,ExpensesPreSet,Farm, FarmRun, Item } from "../type";
+import { PresetTip } from "./PresetTip";
+
+
 
 type RunCollectorProps = {
   selectedFarm: Farm | undefined;
@@ -10,6 +12,10 @@ type RunCollectorProps = {
   currentDrop: Drop[];
   time: string;
   setTime: React.Dispatch<React.SetStateAction<string>>;
+  runPreSet: "A" | "B" | "C";
+  setRunPreSet: React.Dispatch<React.SetStateAction<"A" | "B" | "C">>;
+  expensesPreSet:ExpensesPreSet
+  items:Item[]
 };
 
 export function RunCollector({
@@ -20,10 +26,17 @@ export function RunCollector({
   setCurrentDrop,
   time,
   setTime,
+  runPreSet,
+  setRunPreSet,
+  expensesPreSet,
+  items
 }: RunCollectorProps) {
+  
   if (!selectedFarm) return null;
+  
 
   function arrayChange() {
+    const PreSet = expensesPreSet[runPreSet]
     setNameHolderArr((prev) =>
       prev.map((farm) =>
         farm.id === selector
@@ -36,6 +49,8 @@ export function RunCollector({
                   id: Date.now(),
                   drop: currentDrop.filter((item) => item.count !== 0),
                   time: time,
+                  PreSet: PreSet,
+                  runSelectedPreSet: runPreSet
                 },
               ],
             }
@@ -58,7 +73,7 @@ export function RunCollector({
       ),
     );
   }
-
+  
   //  разрез на 10 а после сшивание в 100
   function chunk(runs: FarmRun[]) {
     const groupOfHundred: FarmRun[][][] = [];
@@ -73,6 +88,7 @@ export function RunCollector({
     }
     return { groupOfHundred, groupOfTen };
   }
+
   function collectDrop(runs: FarmRun[]) {
     const totals: Record<string, number> = {};
 
@@ -84,16 +100,17 @@ export function RunCollector({
 
     return Object.entries(totals).filter(([, count]) => count !== 0);
   }
-
+  const total = selectedFarm.runs.length;
   const { groupOfTen, groupOfHundred } = chunk(selectedFarm.runs);
   const renderGroup = (groups: FarmRun[][], startIndex: number) => {
     return groups.map((runs, index) => (
       <details key={index}>
         <summary>
-          {startIndex + index * 10 + 1}–{startIndex + index * 10 + runs.length}
+          {total - (startIndex + index * 10)}–
+          {total - (startIndex + index * 10 + runs.length) + 1}
           <span className="drop-row">
             {collectDrop(runs).map(([itemId, count]) => {
-              const item = allItems.find((item) => item.id === itemId);
+              const item = items.find((item) => item.id === itemId);
               return (
                 <span key={itemId}>
                   <img
@@ -123,7 +140,11 @@ export function RunCollector({
                 <tr className="run-card" key={runs.id}>
                   <td className="run-title-cell">
                     <h4 className="run-title">
-                      Run {startIndex + index * 10 + runIndex + 1}{" "}
+                      Run {total - (startIndex + index * 10 + runIndex)}{" "}
+                      <span className="run-preset-badge">
+                        {runs?.runSelectedPreSet}
+                        {runs.PreSet && <PresetTip name={runs.runSelectedPreSet} PreSet={runs.PreSet} />}
+                      </span>
                     </h4>
                   </td>
                   <td className="run-time-cell">
@@ -133,7 +154,7 @@ export function RunCollector({
                     <div className="run-drops">
                       <span className="run-label">Drop:</span>{" "}
                       {runs.drop.map((drop, index) => {
-                        const itemInfo = allItems.find(
+                        const itemInfo = items.find(
                           (cur) => cur.id === drop.item,
                         );
                         return (
@@ -180,22 +201,52 @@ export function RunCollector({
                 Run number: {(selectedFarm?.runs?.length ?? 0) + 1}
               </h4>
             </div>
-            <label className="run-time-label">
-              <span>Time:</span>
-              <input
-                type="time"
-                value={time}
-                step="1"
-                className="run-time"
-                onChange={(event) => setTime(event.target.value)}
-              />
-            </label>
+            
+            <div className="run-heading-controls">
+              <div className="expenses-presets" role="group" aria-label="Expenses preset">
+                <button
+                  type="button"
+                  className={runPreSet === "A" ? "expenses-preset is-selected" : "expenses-preset"}
+                  onClick={() => setRunPreSet("A")}
+                >
+                  A
+                  <PresetTip name="A" PreSet={expensesPreSet.A} />
+                </button>
+                <button
+                  type="button"
+                  className={runPreSet === "B" ? "expenses-preset is-selected" : "expenses-preset"}
+                  onClick={() => setRunPreSet("B")}
+                >
+                  B
+                  <PresetTip name="B" PreSet={expensesPreSet.B} />
+                </button>
+                <button
+                  type="button"
+                  className={runPreSet === "C" ? "expenses-preset is-selected" : "expenses-preset"}
+                  onClick={() => setRunPreSet("C")}
+                >
+                  C
+                  <PresetTip name="C" PreSet={expensesPreSet.C} />
+                </button>
+              </div>
+              <label className="run-time-label">
+                <span>Time:</span>
+                <input
+                  type="time"
+                  value={time}
+                  step="1"
+                  className="run-time"
+                  onChange={(event) => setTime(event.target.value)}
+                />
+              </label>
+            </div>
+
           </div>
 
           <div className="run-drops run-loot-grid">
             <span className="run-label">Drop:</span>{" "}
             {currentDrop.map((drop) => {
-              const itemInfo = allItems.find((cur) => cur.id === drop.item);
+              const itemInfo = items.find((cur) => cur.id === drop.item);
               return (
                 <div className="drop-row" key={drop.item}>
                   <img
@@ -253,12 +304,11 @@ export function RunCollector({
       {selectedFarm?.runs.length >= 100
         ? groupOfHundred.map((hundred, index) => (
             <details key={index}>
-              <summary>
-                {index * 100 + 1}–
-                {Math.min((index + 1) * 100, selectedFarm.runs.length)}
+            <summary>
+              {total - index * 100}–{Math.max(total - (index + 1) * 100 + 1, 1)}
                 <span className="drop-row">
                   {collectDrop(hundred.flat()).map(([itemId, count]) => {
-                    const item = allItems.find((item) => item.id === itemId);
+                    const item = items.find((item) => item.id === itemId);
                     return (
                       <span key={itemId}>
                         <img

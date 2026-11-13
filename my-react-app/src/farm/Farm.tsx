@@ -1,8 +1,8 @@
-
+import { usePrices, IMAGE_BASE } from "../usePrices";
 import { useState, useEffect } from "react";
 import "./App.css";
 import type { Farm, Drop, ExpensesPreSet } from "./type";
-
+import { PricesContext } from "./PricesContext";
 
 //импорты компонентов 
 import { demoDrop, getDemoFarm } from "./components/DemoFarm";
@@ -27,6 +27,9 @@ function getInitialFarms() {
 }
 
 function App({}) {
+  const { status, items, error, updatedAt, getItemPrice } = usePrices();
+
+
   const [nameHolderArr, setNameHolderArr] = useState<Farm[]>(getInitialFarms);
 
   useEffect(() => {
@@ -36,9 +39,8 @@ function App({}) {
   const [selector, setSelector] = useState<number | null>(null);
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [currentDrop, setCurrentDrop] = useState<Drop[]>([]);
-  const [activeModal, setActiveModal] = useState<"expenses" | "drop" | null>(
-    null,
-  );
+  const [activeModal, setActiveModal] = useState<"expenses" | "drop" | null>(null,);
+  const [runPreSet, setRunPreSet] = useState<"A" | "B" | "C">("A")
   const [time, setTime] = useState<string>("00:00:00");
 
   const [expensesPreSet, setExpensesPreSet] = useState<ExpensesPreSet>({
@@ -52,6 +54,7 @@ function App({}) {
   );
 
   const selectedFarm = nameHolderArr.find((e) => e.id === selector);
+  
 
   function createDemoFarm() {
     const now = Date.now();
@@ -60,8 +63,11 @@ function App({}) {
     setSelectedItems(demoDrop.map((d) => d.item));
     setCurrentDrop(demoDrop);
   }
+  if (status === "loading") return <p>Загружаю цены…</p>;
+  if (status === "error") return <p>Не удалось загрузить цены: {error}</p>;
 
   return (
+    <PricesContext.Provider value={items}>
     <div className="farm-page">
       <header className="farm-header">
         <span className="farm-eyebrow">Path of Exile II / Atlas Journal</span>
@@ -77,7 +83,9 @@ function App({}) {
             setSelector={setSelector}
             createDemoFarm={createDemoFarm}
           />
-          {selector !== null && <MainInfo selectedFarm={selectedFarm} />}
+          {selector !== null && <MainInfo 
+          selectedFarm={selectedFarm} 
+          expensesPreSet={expensesPreSet}/>}
           <RunCollector
             setNameHolderArr={setNameHolderArr}
             selector={selector}
@@ -86,6 +94,10 @@ function App({}) {
             setCurrentDrop={setCurrentDrop}
             time={time}
             setTime={setTime}
+            runPreSet={runPreSet}
+            setRunPreSet={setRunPreSet}
+            expensesPreSet={expensesPreSet}
+            items={items}
           />
         </div>
         {selector !== null && (
@@ -118,13 +130,14 @@ function App({}) {
             onClose={() => setActiveModal(null)}
             selectedItems={selectedItems}
             setSelectedItems={setSelectedItems}
-
+            items={items}
             currentDrop={currentDrop}
             setCurrentDrop={setCurrentDrop}
           />
         </Modal>
       )}
     </div>
+    </PricesContext.Provider>
   );
 }
 

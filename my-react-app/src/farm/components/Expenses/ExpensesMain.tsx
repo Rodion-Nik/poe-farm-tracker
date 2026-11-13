@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ExpensesPreSet, WaystoneExpenses } from "../../type";
-import { expensesItem } from "../utils/items";
+import { useExpensesItem } from "../utils/items";
 import { DndContext, DragOverlay, DragStartEvent, DragEndEvent, } from "@dnd-kit/core";
 import { ExpensesButton } from "./ExpensesButton";
 import { ExpensesDropSection } from "./ExpensesDropSection";
@@ -20,6 +20,7 @@ export function ExpensesMain({
   expensesPreSet,
   setExpensesPreSet,
 }: ExpensesProp) {
+  const expensesItem = useExpensesItem()
   const [activeId, setActiveId] = useState<string | number | null>(null);
   // подсветка в каталоге = всё, что лежит в текущем пресете
   const PreSet = expensesPreSet[expensesSelector];
@@ -202,7 +203,7 @@ export function ExpensesMain({
                   ({ itemCategory }) => itemCategory!,
                 ),
                 ).map(([itemCategory, items]) => (
-              <div key={itemCategory}>
+              <div className="expenses-waystone-group" key={itemCategory}>
                 <span className="expenses-subgroup-title">{itemCategory}</span>
                 {items!.map((item) => (
                 <Draggable key={item.detailsId} id={item.id}>

@@ -51,7 +51,7 @@ body:has(.farm-page) {
   background:
     linear-gradient(180deg, var(--back-shade, #090e0c0a), #090e0c25 230px, #090e0cce 520px, #090e0c 780px),
     linear-gradient(90deg, #090e0c90, #090e0c30 48%, #090e0c10 78%),
-    url('../public/img/back.avif') top center / max(1180px, 100vw) auto no-repeat #090e0c;
+    url('/img/back.avif') top center / max(1180px, 100vw) auto no-repeat #090e0c;
 }
 
 body:has(.farm-page .modal-overlay) {
@@ -557,6 +557,105 @@ body:has(.farm-page .modal-overlay) {
   font: 12px/1.3 var(--sans);
 }
 
+.run-heading-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+/* .farm-page prefix: must outrank the base .farm-page .expenses-preset(s) rules further down. */
+.farm-page .run-heading-controls .expenses-preset {
+  position: relative;
+  min-height: 36px;
+}
+
+/* The tooltip hangs below the switch, so the switch must not clip it. */
+.farm-page .run-heading-controls .expenses-presets {
+  overflow: visible;
+}
+
+/* Hover/focus card listing what a preset holds. */
+.preset-tip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 20;
+  display: grid;
+  gap: 6px;
+  width: max-content;
+  min-width: 180px;
+  max-width: 260px;
+  padding: 10px 12px;
+  color: var(--parchment);
+  font: 400 12px/1.3 var(--sans);
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: none;
+  background: #0d1410f2;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 10px 24px #000a;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 120ms, visibility 120ms;
+}
+
+.expenses-preset:hover .preset-tip,
+.expenses-preset:focus-visible .preset-tip,
+.run-preset-badge:hover .preset-tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* In run history the badge sits at the table's left edge, so open the card rightwards. */
+.run-preset-badge .preset-tip {
+  left: 0;
+  transform: none;
+}
+
+.preset-tip-title {
+  color: var(--dim);
+  font: 600 10px/1.3 var(--sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.preset-tip-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.preset-tip-row .item-icon {
+  flex: none;
+  width: 22px;
+  height: 22px;
+}
+
+.preset-tip-empty {
+  color: var(--dim);
+}
+
+/* Preset letter next to a saved run's title; hidden for runs saved without a preset. */
+.run-preset-badge {
+  position: relative;
+  margin-left: 6px;
+  cursor: default;
+  padding: 1px 6px;
+  color: var(--gold);
+  font: 600 10px/1.4 var(--sans);
+  letter-spacing: .1em;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.run-preset-badge:empty {
+  display: none;
+}
+
 .run-editor .run-time {
   width: 146px;
   min-height: 36px;
@@ -728,9 +827,9 @@ body:has(.farm-page .modal-overlay) {
   margin: 8px 0 0 12px;
 }
 
+/* No overflow here on desktop: it would clip the preset tooltips. The scroll is turned on at <=760px, where the table gets a min-width. */
 .run-history {
   max-width: 100%;
-  overflow-x: auto;
   border: 1px solid var(--line);
   border-top: 0;
   border-radius: 0 0 3px 3px;
@@ -1599,6 +1698,28 @@ body:has(.farm-page .modal-overlay) {
   min-height: 68px;
 }
 
+/* One group per item category; subgrid keeps the parent's column count at every breakpoint. */
+.farm-page .expenses-waystone-group {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 8px 12px;
+  align-items: start;
+}
+
+.farm-page .expenses-waystone-group + .expenses-waystone-group {
+  margin-top: 10px;
+}
+
+.farm-page .expenses-subgroup-title {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  color: var(--label);
+  font: 600 10px/1.3 var(--sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 @container (max-width: 660px) {
   .farm-page .expenses-bosses { column-count: 2; }
   .farm-page .expenses-waystones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1686,6 +1807,7 @@ body:has(.farm-page .modal-overlay) {
   .summary-card img { width: 24px; height: 24px; }
   .farm-summary .summary-card--compact { padding: 12px 14px; }
 
+  .run-history { overflow-x: auto; }
   .history-table { min-width: 620px; }
 
   .farm-page .modal-overlay { padding: 12px; }
@@ -1724,7 +1846,8 @@ body:has(.farm-page .modal-overlay) {
 
   .run-editor { padding: 18px 14px; }
   .run-heading { gap: 16px; }
-  .run-time-label { flex-basis: 100%; margin: 0; justify-content: space-between; }
+  .run-heading-controls { flex-basis: 100%; margin: 0; justify-content: space-between; }
+  .run-time-label { margin: 0; }
   .run-loot-grid { grid-template-columns: minmax(0, 1fr); }
   .run-editor .drop-row { min-height: 62px; }
   .run-actions > .button-primary { width: 100%; }

@@ -1,17 +1,21 @@
 //  ниже панель с инфой
-import { Farm } from "../type";
+import { Farm, ExpensesPreSet} from "../type";
 import { divImg } from "./utils/items";
-import { getItemPrice } from "../../ApiDataBase";
+
+import { usePriceItems } from "../PricesContext";
+
 type MainProps = {
   selectedFarm: Farm | undefined;
+  expensesPreSet: ExpensesPreSet
 };
 
-export function MainInfo({ selectedFarm }: MainProps) {
+export function MainInfo({ selectedFarm, expensesPreSet }: MainProps) {
+  const pricedItems = usePriceItems()
   const profit = (selectedFarm?.runs ?? []).reduce(
     (total, run) =>
       total +
       run.drop.reduce(
-        (sum, drop) => sum + drop.count * getItemPrice(drop.item),
+        (sum, drop) => sum + drop.count * (pricedItems.find(item => item.id === drop.item)?.price ?? 0),
         0,
       ),
     0,
@@ -32,6 +36,19 @@ export function MainInfo({ selectedFarm }: MainProps) {
     ":" +
     String(s).padStart(2, "0");
 
+  const costCalc = () =>{
+
+    let total = 0
+    for (const run of selectedFarm?.runs ?? []) {
+      if (Array.isArray(run?.PreSet)) { total += run.PreSet.reduce((sum, item) => { return item.customPrice ? sum + item.customPrice : sum + (pricedItems.find(priceItems => priceItems.id === item.itemId)?.price ?? 0) },0)}
+      else if (run?.PreSet) {
+        const arr = Object.values(run.PreSet.waystone).flat();
+        total += arr.reduce((sum, item) => { return item.customPrice ? sum + item.customPrice : sum + (pricedItems.find(priceItems => priceItems.id === item.itemId)?.price ?? 0) }, 0)
+      }
+      
+    } return total
+  }
+
   return (
     <div className="farm-summary">
       <h4 className="summary-card summary-card--runs">
@@ -41,7 +58,7 @@ export function MainInfo({ selectedFarm }: MainProps) {
       <h4 className="summary-card summary-card--profit">
         <span className="summary-label">Profit</span>
         <span className="summary-value">
-          {profit.toFixed(2)} <img src={divImg} />
+          {(profit - Number(costCalc())).toFixed(2)} <img src={divImg} />
         </span>
       </h4>
       <h4 className="summary-card summary-card--rate">
@@ -53,6 +70,7 @@ export function MainInfo({ selectedFarm }: MainProps) {
       </h4>
       <h4 className="summary-card summary-card--compact">
         <span className="summary-label">Total costs</span>
+        <span className="summary-value">{costCalc().toFixed(2)}<img src={divImg} /></span>
       </h4>
       <h4 className="summary-card summary-card--compact">
         <span className="summary-label">Total time</span>
